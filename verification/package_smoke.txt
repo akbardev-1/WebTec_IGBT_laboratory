@@ -1,0 +1,13 @@
+{
+  "result": "PASS",
+  "checks": [
+    "ZIP CRC verified",
+    "fresh extraction into separate folder",
+    "CLI launch with custom port and no browser",
+    "config, model and documentation routes",
+    "full suite computes 10/10 pass from extracted files",
+    "complete report saved inside extracted project",
+    "hardware release remains false"
+  ],
+  "limitation": "Linux execution; not direct Windows/macOS launch verification."
+}

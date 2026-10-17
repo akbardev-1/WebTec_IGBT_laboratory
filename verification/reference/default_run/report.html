@@ -1,0 +1,218 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>IGBT virtual test report</title><style>body{font:14px system-ui;max-width:1200px;margin:35px auto;padding:0 20px;color:#20374a}h1{font-size:27px}h2{font-size:18px;margin-top:30px}table{border-collapse:collapse;width:100%;font-size:11px}th,td{padding:8px;border:1px solid #ccc;text-align:left}th{background:#edf3f6}pre{white-space:pre-wrap;font-size:10px}li{margin:7px 0}@media print{button{display:none}h2{break-after:avoid}tr{break-inside:avoid}}</style><h1>IGBT 3D Virtual Lab — run report</h1><button onclick="print()">Print / save PDF</button><p><b>Virtual suite: PASS · Hardware qualification: INCOMPLETE</b></p><p>Assembly: REFERENCE-SURROGATE · Operator: Numerical verification<br>Run: 9929792f-7522-41f2-ac1f-584c71b446b2 · 2026-10-17T22:48:00.167166+00:00<br>Version: 2.0.0 · Profile: NU-IEEE-PROTOTYPE-2.0</p><p>Virtual PASS means every required prototype check and discharge passed. Physical module qualification remains INCOMPLETE.</p><p>Estimated automated cycle: 11.831 s. Estimated total including assumed handling: 103.83 s. These are model estimates, not measured throughput.</p><h2>Mandatory coverage</h2><ul><li>station: PASS</li><li>driver: PASS</li><li>fiber: PASS</li><li>insulation: PASS</li><li>lower_static: PASS</li><li>lower_switching: PASS</li><li>lower_protection: PASS</li><li>upper_static: PASS</li><li>upper_switching: PASS</li><li>upper_protection: PASS</li></ul><h2>Station interlocks — PASS</h2><table><thead><tr><th>Check</th><th>Calculated</th><th>Limit</th><th>Unit</th><th>Outcome</th><th>Basis</th></tr></thead><tbody><tr><td>Door closed</td><td>True</td><td>True</td><td></td><td>PASS</td><td>Virtual safety-chain input; not measured hardware</td></tr><tr><td>Module clamped</td><td>True</td><td>True</td><td></td><td>PASS</td><td>Virtual safety-chain input; not measured hardware</td></tr><tr><td>Test connector engaged</td><td>True</td><td>True</td><td></td><td>PASS</td><td>Virtual safety-chain input; not measured hardware</td></tr><tr><td>Protective earth connected</td><td>True</td><td>True</td><td></td><td>PASS</td><td>Virtual safety-chain input; not measured hardware</td></tr><tr><td>Emergency stop released</td><td>True</td><td>True</td><td></td><td>PASS</td><td>Virtual safety-chain input; not measured hardware</td></tr><tr><td>Command/status fiber connected</td><td>True</td><td>True</td><td></td><td>PASS</td><td>Virtual safety-chain input; not measured hardware</td></tr><tr><td>Cooling available</td><td>True</td><td>True</td><td></td><td>PASS</td><td>Virtual safety-chain input; not measured hardware</td></tr><tr><td>Source isolation contact open feedback</td><td>True</td><td>True</td><td></td><td>PASS</td><td>Virtual safety-chain input; not measured hardware</td></tr></tbody></table><h2>Driver supply and rail checks — PASS</h2><table><thead><tr><th>Check</th><th>Calculated</th><th>Limit</th><th>Unit</th><th>Outcome</th><th>Basis</th></tr></thead><tbody><tr><td>Loaded driver supply</td><td>99.57418683145494</td><td>95–105</td><td>Vrms</td><td>PASS</td><td>100 Vrms project target; ±5% prototype tolerance; constant-power load</td></tr><tr><td>Driver supply frequency</td><td>25.0</td><td>23.75–26.25</td><td>kHz</td><td>PASS</td><td>25 kHz project target; ±5% assumed</td></tr><tr><td>Driver power per channel</td><td>4.24</td><td>20</td><td>W</td><td>PASS</td><td>Project 20 W maximum; idle input plus Qg × gate swing × activity frequency</td></tr><tr><td>Effective ON rail</td><td>14.93612802471824</td><td>14–16</td><td>V</td><td>PASS</td><td>Project +15 V; ±1 V assumed. Idealized isolated rail conversion</td></tr><tr><td>Effective OFF rail</td><td>-14.93612802471824</td><td>−16 to −14</td><td>V</td><td>PASS</td><td>Project −15 V; ±1 V assumed. Supply frequency is not gate PWM frequency</td></tr></tbody></table><h2>Fiber command and returned-status timing — PASS</h2><table><thead><tr><th>Check</th><th>Calculated</th><th>Limit</th><th>Unit</th><th>Outcome</th><th>Basis</th></tr></thead><tbody><tr><td>Command propagation delay</td><td>0.2</td><td>1</td><td>µs</td><td>PASS</td><td>Logical transport delay; 1 µs assumed, no OEM optical protocol</td></tr><tr><td>Fault-status propagation delay</td><td>0.2</td><td>1</td><td>µs</td><td>PASS</td><td>Logical returned-status delay; local trip does not wait for laptop status</td></tr></tbody></table><h2>Busbar insulation and discharge — PASS</h2><table><thead><tr><th>Check</th><th>Calculated</th><th>Limit</th><th>Unit</th><th>Outcome</th><th>Basis</th></tr></thead><tbody><tr><td>Insulation voltage attained</td><td>0.0999000999001055</td><td>5</td><td>% error</td><td>PASS</td><td>Checks source droop and RC settling at the selected provisional voltage</td></tr><tr><td>Insulation leakage after dwell</td><td>0.004995004995004995</td><td>2</td><td>mA</td><td>PASS</td><td>Project ≤2 mA; voltage and dwell await OEM approval</td></tr><tr><td>Insulation node discharged</td><td>0.20213840997256402</td><td>30</td><td>V</td><td>PASS</td><td>Separate current-limited insulation circuit; provisional access threshold</td></tr></tbody></table><h2>Lower static checks — PASS</h2><table><thead><tr><th>Check</th><th>Calculated</th><th>Limit</th><th>Unit</th><th>Outcome</th><th>Basis</th></tr></thead><tbody><tr><td>Gate leakage at +20 V</td><td>200.0</td><td>300</td><td>nA</td><td>PASS</td><td>Surrogate maximum at 20 V; resistive leakage approximation</td></tr><tr><td>Blocking leakage at 1200 V, gate 0 V</td><td>12.0</td><td>300</td><td>µA</td><td>PASS</td><td>Surrogate maximum; separate current-limited static stimulus, not DC-link charging</td></tr><tr><td>Static VCE at 80 A, gate +15 V</td><td>2.0499999996061504</td><td>2.85</td><td>V</td><td>PASS</td><td>2.85 V surrogate maximum at 25 °C; temperature offset above 25 °C is assumed</td></tr><tr><td>Diode forward voltage at 1 mA</td><td>0.70003525</td><td>0.2–0.8</td><td>V</td><td>PASS</td><td>Project voltage range; 1 mA stimulus is assumed, not power-current VF</td></tr><tr><td>Diode reverse leakage at 100 V</td><td>0.1</td><td>10</td><td>µA</td><td>PASS</td><td>Quantifies project “open”; voltage and 10 µA threshold are provisional</td></tr></tbody></table><h2>Upper static checks — PASS</h2><table><thead><tr><th>Check</th><th>Calculated</th><th>Limit</th><th>Unit</th><th>Outcome</th><th>Basis</th></tr></thead><tbody><tr><td>Gate leakage at +20 V</td><td>200.0</td><td>300</td><td>nA</td><td>PASS</td><td>Surrogate maximum at 20 V; resistive leakage approximation</td></tr><tr><td>Blocking leakage at 1200 V, gate 0 V</td><td>12.0</td><td>300</td><td>µA</td><td>PASS</td><td>Surrogate maximum; separate current-limited static stimulus, not DC-link charging</td></tr><tr><td>Static VCE at 80 A, gate +15 V</td><td>2.0499999996061504</td><td>2.85</td><td>V</td><td>PASS</td><td>2.85 V surrogate maximum at 25 °C; temperature offset above 25 °C is assumed</td></tr><tr><td>Diode forward voltage at 1 mA</td><td>0.70003525</td><td>0.2–0.8</td><td>V</td><td>PASS</td><td>Project voltage range; 1 mA stimulus is assumed, not power-current VF</td></tr><tr><td>Diode reverse leakage at 100 V</td><td>0.1</td><td>10</td><td>µA</td><td>PASS</td><td>Quantifies project “open”; voltage and 10 µA threshold are provisional</td></tr></tbody></table><h2>Lower switching — PASS</h2><table><thead><tr><th>Check</th><th>Calculated</th><th>Limit</th><th>Unit</th><th>Outcome</th><th>Basis</th></tr></thead><tbody><tr><td>Collector voltage ceiling</td><td>547.8619530343922</td><td>1200</td><td>V</td><td>PASS</td><td>Public surrogate absolute rating; not a complete SOA assessment</td></tr><tr><td>Absolute gate voltage</td><td>14.936150575924243</td><td>20</td><td>V</td><td>PASS</td><td>Public surrogate absolute rating</td></tr><tr><td>Current slew over 10 ns</td><td>1450.7968429573793</td><td>5000</td><td>A/µs</td><td>PASS</td><td>Project brief maximum; 10 ns measurement aperture is assumed, not specified in the brief</td></tr><tr><td>Estimated peak junction temperature</td><td>25.084478820373473</td><td>150</td><td>°C</td><td>PASS</td><td>Surrogate maximum; illustrative lumped thermal model, not validated SOA</td></tr><tr><td>Collector current ceiling</td><td>65.31789745511792</td><td>201</td><td>A</td><td>PASS</td><td>Public surrogate pulsed-current ceiling; pulse and thermal SOA not qualified</td></tr><tr><td>Freewheel current ceiling</td><td>61.31969648990194</td><td>84</td><td>A</td><td>PASS</td><td>Public surrogate diode repetitive peak ceiling; thermal conditions not qualified</td></tr><tr><td>Settled ON gate voltage</td><td>14.936150327549377</td><td>14–16</td><td>V</td><td>PASS</td><td>Project target +15 V; ±1 V tolerance is an engineering assumption</td></tr><tr><td>First-pulse current tracking</td><td>0.3771030135178561</td><td>10</td><td>%</td><td>PASS</td><td>Engineering check against series-RL current, assumed constant 2.05 V device drop</td></tr><tr><td>Uncommanded protection trip</td><td>0</td><td>0</td><td>trips</td><td>PASS</td><td>A normal double pulse must complete without desaturation shutdown</td></tr><tr><td>OFF gate after final pulse</td><td>-14.936128332537944</td><td>−16 to −14</td><td>V</td><td>PASS</td><td>Calculated final transition, not the initialized OFF state</td></tr><tr><td>Second turn-on energy in 2 µs</td><td>1.0038390521797433</td><td>1.9749012116537374</td><td>mJ</td><td>PASS</td><td>Prototype energy budget scaled by requested V × ideal-RL current and assumed temperature factor; not datasheet Eon/Eoff</td></tr><tr><td>First turn-off energy in 2 µs</td><td>2.1578309137275697</td><td>3.949802423307475</td><td>mJ</td><td>PASS</td><td>Prototype energy budget scaled by requested V × ideal-RL current and assumed temperature factor; not datasheet Eon/Eoff</td></tr><tr><td>Requested current / bus in comparison envelope</td><td>59.247 A / 400.000 V</td><td>20–80 A / 100–600 V</td><td></td><td>PASS</td><td>Outside this provisional comparison envelope, no complete model acceptance is issued</td></tr></tbody></table><h2>Lower protection — PASS</h2><table><thead><tr><th>Check</th><th>Calculated</th><th>Limit</th><th>Unit</th><th>Outcome</th><th>Basis</th></tr></thead><tbody><tr><td>Collector voltage ceiling</td><td>507.5743922960515</td><td>1200</td><td>V</td><td>PASS</td><td>Public surrogate absolute rating; not a complete SOA assessment</td></tr><tr><td>Absolute gate voltage</td><td>16.543073663930443</td><td>20</td><td>V</td><td>PASS</td><td>Public surrogate absolute rating</td></tr><tr><td>Current slew over 10 ns</td><td>1861.5454001871456</td><td>5000</td><td>A/µs</td><td>PASS</td><td>Project brief maximum; 10 ns measurement aperture is assumed, not specified in the brief</td></tr><tr><td>Estimated peak junction temperature</td><td>25.85090219159566</td><td>150</td><td>°C</td><td>PASS</td><td>Surrogate maximum; illustrative lumped thermal model, not validated SOA</td></tr><tr><td>Fault detected after short insertion</td><td>5.30550000000018</td><td>4.2</td><td>µs</td><td>PASS</td><td>A trip before the applied fault does not demonstrate the required protection response</td></tr><tr><td>Detection to current below 10%</td><td>1.259500000000129</td><td>10</td><td>µs</td><td>PASS</td><td>Project ~10 µs requirement; 10% of detection current endpoint is explicitly assumed</td></tr><tr><td>Fault insertion to current below 10%</td><td>2.3650000000003084</td><td>5</td><td>µs</td><td>PASS</td><td>Additional 5 µs prototype deadline; conditional surrogate rating does not prove survival</td></tr><tr><td>Fault bus within prototype envelope</td><td>400.0</td><td>600</td><td>V</td><td>PASS</td><td>Surrogate short-circuit rating is conditional at 600 V/+15 V and ≤150 °C; this is only a boundary screen</td></tr></tbody></table><h2>Upper switching — PASS</h2><table><thead><tr><th>Check</th><th>Calculated</th><th>Limit</th><th>Unit</th><th>Outcome</th><th>Basis</th></tr></thead><tbody><tr><td>Collector voltage ceiling</td><td>547.8619530343922</td><td>1200</td><td>V</td><td>PASS</td><td>Public surrogate absolute rating; not a complete SOA assessment</td></tr><tr><td>Absolute gate voltage</td><td>14.936150575924243</td><td>20</td><td>V</td><td>PASS</td><td>Public surrogate absolute rating</td></tr><tr><td>Current slew over 10 ns</td><td>1450.7968429573793</td><td>5000</td><td>A/µs</td><td>PASS</td><td>Project brief maximum; 10 ns measurement aperture is assumed, not specified in the brief</td></tr><tr><td>Estimated peak junction temperature</td><td>25.084478820373473</td><td>150</td><td>°C</td><td>PASS</td><td>Surrogate maximum; illustrative lumped thermal model, not validated SOA</td></tr><tr><td>Collector current ceiling</td><td>65.31789745511792</td><td>201</td><td>A</td><td>PASS</td><td>Public surrogate pulsed-current ceiling; pulse and thermal SOA not qualified</td></tr><tr><td>Freewheel current ceiling</td><td>61.31969648990194</td><td>84</td><td>A</td><td>PASS</td><td>Public surrogate diode repetitive peak ceiling; thermal conditions not qualified</td></tr><tr><td>Settled ON gate voltage</td><td>14.936150327549377</td><td>14–16</td><td>V</td><td>PASS</td><td>Project target +15 V; ±1 V tolerance is an engineering assumption</td></tr><tr><td>First-pulse current tracking</td><td>0.3771030135178561</td><td>10</td><td>%</td><td>PASS</td><td>Engineering check against series-RL current, assumed constant 2.05 V device drop</td></tr><tr><td>Uncommanded protection trip</td><td>0</td><td>0</td><td>trips</td><td>PASS</td><td>A normal double pulse must complete without desaturation shutdown</td></tr><tr><td>OFF gate after final pulse</td><td>-14.936128332537944</td><td>−16 to −14</td><td>V</td><td>PASS</td><td>Calculated final transition, not the initialized OFF state</td></tr><tr><td>Second turn-on energy in 2 µs</td><td>1.0038390521797433</td><td>1.9749012116537374</td><td>mJ</td><td>PASS</td><td>Prototype energy budget scaled by requested V × ideal-RL current and assumed temperature factor; not datasheet Eon/Eoff</td></tr><tr><td>First turn-off energy in 2 µs</td><td>2.1578309137275697</td><td>3.949802423307475</td><td>mJ</td><td>PASS</td><td>Prototype energy budget scaled by requested V × ideal-RL current and assumed temperature factor; not datasheet Eon/Eoff</td></tr><tr><td>Requested current / bus in comparison envelope</td><td>59.247 A / 400.000 V</td><td>20–80 A / 100–600 V</td><td></td><td>PASS</td><td>Outside this provisional comparison envelope, no complete model acceptance is issued</td></tr></tbody></table><h2>Upper protection — PASS</h2><table><thead><tr><th>Check</th><th>Calculated</th><th>Limit</th><th>Unit</th><th>Outcome</th><th>Basis</th></tr></thead><tbody><tr><td>Collector voltage ceiling</td><td>507.5743922960515</td><td>1200</td><td>V</td><td>PASS</td><td>Public surrogate absolute rating; not a complete SOA assessment</td></tr><tr><td>Absolute gate voltage</td><td>16.543073663930443</td><td>20</td><td>V</td><td>PASS</td><td>Public surrogate absolute rating</td></tr><tr><td>Current slew over 10 ns</td><td>1861.5454001871456</td><td>5000</td><td>A/µs</td><td>PASS</td><td>Project brief maximum; 10 ns measurement aperture is assumed, not specified in the brief</td></tr><tr><td>Estimated peak junction temperature</td><td>25.85090219159566</td><td>150</td><td>°C</td><td>PASS</td><td>Surrogate maximum; illustrative lumped thermal model, not validated SOA</td></tr><tr><td>Fault detected after short insertion</td><td>5.30550000000018</td><td>4.2</td><td>µs</td><td>PASS</td><td>A trip before the applied fault does not demonstrate the required protection response</td></tr><tr><td>Detection to current below 10%</td><td>1.259500000000129</td><td>10</td><td>µs</td><td>PASS</td><td>Project ~10 µs requirement; 10% of detection current endpoint is explicitly assumed</td></tr><tr><td>Fault insertion to current below 10%</td><td>2.3650000000003084</td><td>5</td><td>µs</td><td>PASS</td><td>Additional 5 µs prototype deadline; conditional surrogate rating does not prove survival</td></tr><tr><td>Fault bus within prototype envelope</td><td>400.0</td><td>600</td><td>V</td><td>PASS</td><td>Surrogate short-circuit rating is conditional at 600 V/+15 V and ≤150 °C; this is only a boundary screen</td></tr></tbody></table><h2>Lower switching shutdown — PASS</h2><table><thead><tr><th>Check</th><th>Calculated</th><th>Limit</th><th>Unit</th><th>Outcome</th><th>Basis</th></tr></thead><tbody><tr><td>Source isolation confirmed</td><td>True</td><td>True</td><td></td><td>PASS</td><td>Physical contact feedback is represented as an explicit station input</td></tr><tr><td>Residual DC-link voltage</td><td>29.682542660669633</td><td>30</td><td>V</td><td>PASS</td><td>Prototype access threshold; not a universal safe-touch declaration</td></tr><tr><td>Residual current upper bound</td><td>8.140237204284522e-142</td><td>0.1</td><td>A</td><td>PASS</td><td>Passive RL envelope includes signed companion-path energy</td></tr><tr><td>Residual stored energy</td><td>0.20711251132439226</td><td>0.25</td><td>J</td><td>PASS</td><td>DC capacitor plus magnetic energy and conservative gate-capacitance allowance</td></tr></tbody></table><h2>Lower protection shutdown — PASS</h2><table><thead><tr><th>Check</th><th>Calculated</th><th>Limit</th><th>Unit</th><th>Outcome</th><th>Basis</th></tr></thead><tbody><tr><td>Source isolation confirmed</td><td>True</td><td>True</td><td></td><td>PASS</td><td>Physical contact feedback is represented as an explicit station input</td></tr><tr><td>Residual DC-link voltage</td><td>29.682542660669636</td><td>30</td><td>V</td><td>PASS</td><td>Prototype access threshold; not a universal safe-touch declaration</td></tr><tr><td>Residual current upper bound</td><td>2.4784518441670796e-143</td><td>0.1</td><td>A</td><td>PASS</td><td>Passive RL envelope includes signed companion-path energy</td></tr><tr><td>Residual stored energy</td><td>0.20710457052799164</td><td>0.25</td><td>J</td><td>PASS</td><td>DC capacitor plus magnetic energy and conservative gate-capacitance allowance</td></tr></tbody></table><h2>Upper switching shutdown — PASS</h2><table><thead><tr><th>Check</th><th>Calculated</th><th>Limit</th><th>Unit</th><th>Outcome</th><th>Basis</th></tr></thead><tbody><tr><td>Source isolation confirmed</td><td>True</td><td>True</td><td></td><td>PASS</td><td>Physical contact feedback is represented as an explicit station input</td></tr><tr><td>Residual DC-link voltage</td><td>29.682542660669633</td><td>30</td><td>V</td><td>PASS</td><td>Prototype access threshold; not a universal safe-touch declaration</td></tr><tr><td>Residual current upper bound</td><td>8.140237204284522e-142</td><td>0.1</td><td>A</td><td>PASS</td><td>Passive RL envelope includes signed companion-path energy</td></tr><tr><td>Residual stored energy</td><td>0.20711251132439226</td><td>0.25</td><td>J</td><td>PASS</td><td>DC capacitor plus magnetic energy and conservative gate-capacitance allowance</td></tr></tbody></table><h2>Upper protection shutdown — PASS</h2><table><thead><tr><th>Check</th><th>Calculated</th><th>Limit</th><th>Unit</th><th>Outcome</th><th>Basis</th></tr></thead><tbody><tr><td>Source isolation confirmed</td><td>True</td><td>True</td><td></td><td>PASS</td><td>Physical contact feedback is represented as an explicit station input</td></tr><tr><td>Residual DC-link voltage</td><td>29.682542660669636</td><td>30</td><td>V</td><td>PASS</td><td>Prototype access threshold; not a universal safe-touch declaration</td></tr><tr><td>Residual current upper bound</td><td>2.4784518441670796e-143</td><td>0.1</td><td>A</td><td>PASS</td><td>Passive RL envelope includes signed companion-path energy</td></tr><tr><td>Residual stored energy</td><td>0.20710457052799164</td><td>0.25</td><td>J</td><td>PASS</td><td>DC capacitor plus magnetic energy and conservative gate-capacitance allowance</td></tr></tbody></table><h2>Hardware qualification blockers</h2><ul><li>Exact locomotive assembly, semiconductor, driver, diode, busbar and cooling part numbers are unavailable.</li><li>OEM acceptance conditions, limits, interface pinout, optical protocol and fault semantics are unapproved.</li><li>No measured switching, leakage, thermal or fault traces have been supplied for correlation.</li><li>Nonlinear capacitance, diode reverse recovery, detailed driver electronics and full safe operating area are not validated.</li><li>Independent physical protection, insulation coordination, fixture loads and instrument uncertainty require engineering review and commissioning.</li></ul><h2>Inputs and traceability</h2><pre>{
+  &quot;parameters&quot;: {
+    &quot;bus_v&quot;: 400.0,
+    &quot;load_uh&quot;: 500.0,
+    &quot;load_r&quot;: 0.1,
+    &quot;pulse_us&quot;: 75.0,
+    &quot;gap_us&quot;: 8.0,
+    &quot;second_us&quot;: 3.0,
+    &quot;gate_on&quot;: 15.0,
+    &quot;gate_off&quot;: -15.0,
+    &quot;gate_r&quot;: 4.7,
+    &quot;stray_nh&quot;: 50.0,
+    &quot;ron_factor&quot;: 1.0,
+    &quot;ce_mohm&quot;: 100.0,
+    &quot;ins_mohm&quot;: 100.0,
+    &quot;ins_v&quot;: 500.0,
+    &quot;desat_v&quot;: 9.0,
+    &quot;blank_us&quot;: 2.0,
+    &quot;trip_us&quot;: 1.0,
+    &quot;dc_cap_uf&quot;: 470.0,
+    &quot;gate_mohm&quot;: 100.0,
+    &quot;temperature_c&quot;: 25.0,
+    &quot;thermal_c_j_k&quot;: 0.1,
+    &quot;thermal_r_k_w&quot;: 0.6,
+    &quot;diode_vf_v&quot;: 0.7,
+    &quot;diode_r_factor&quot;: 1.0,
+    &quot;diode_reverse_mohm&quot;: 1000.0,
+    &quot;supply_vrms&quot;: 100.0,
+    &quot;supply_khz&quot;: 25.0,
+    &quot;supply_r&quot;: 10.0,
+    &quot;driver_idle_w&quot;: 4.0,
+    &quot;driver_pwm_khz&quot;: 10.0,
+    &quot;fiber_delay_us&quot;: 0.2,
+    &quot;status_delay_us&quot;: 0.2,
+    &quot;ins_cap_nf&quot;: 10.0,
+    &quot;ins_source_kohm&quot;: 100.0,
+    &quot;ins_dwell_s&quot;: 1.0,
+    &quot;dump_r_ohm&quot;: 1000.0,
+    &quot;precharge_r_ohm&quot;: 100.0,
+    &quot;charge_limit_a&quot;: 0.5,
+    &quot;fault_r_ohm&quot;: 0.05,
+    &quot;fault_l_uh&quot;: 2.0
+  },
+  &quot;device_parameters&quot;: {
+    &quot;lower&quot;: {
+      &quot;bus_v&quot;: 400.0,
+      &quot;load_uh&quot;: 500.0,
+      &quot;load_r&quot;: 0.1,
+      &quot;pulse_us&quot;: 75.0,
+      &quot;gap_us&quot;: 8.0,
+      &quot;second_us&quot;: 3.0,
+      &quot;gate_on&quot;: 15.0,
+      &quot;gate_off&quot;: -15.0,
+      &quot;gate_r&quot;: 4.7,
+      &quot;stray_nh&quot;: 50.0,
+      &quot;ron_factor&quot;: 1.0,
+      &quot;ce_mohm&quot;: 100.0,
+      &quot;ins_mohm&quot;: 100.0,
+      &quot;ins_v&quot;: 500.0,
+      &quot;desat_v&quot;: 9.0,
+      &quot;blank_us&quot;: 2.0,
+      &quot;trip_us&quot;: 1.0,
+      &quot;dc_cap_uf&quot;: 470.0,
+      &quot;gate_mohm&quot;: 100.0,
+      &quot;temperature_c&quot;: 25.0,
+      &quot;thermal_c_j_k&quot;: 0.1,
+      &quot;thermal_r_k_w&quot;: 0.6,
+      &quot;diode_vf_v&quot;: 0.7,
+      &quot;diode_r_factor&quot;: 1.0,
+      &quot;diode_reverse_mohm&quot;: 1000.0
+    },
+    &quot;upper&quot;: {
+      &quot;bus_v&quot;: 400.0,
+      &quot;load_uh&quot;: 500.0,
+      &quot;load_r&quot;: 0.1,
+      &quot;pulse_us&quot;: 75.0,
+      &quot;gap_us&quot;: 8.0,
+      &quot;second_us&quot;: 3.0,
+      &quot;gate_on&quot;: 15.0,
+      &quot;gate_off&quot;: -15.0,
+      &quot;gate_r&quot;: 4.7,
+      &quot;stray_nh&quot;: 50.0,
+      &quot;ron_factor&quot;: 1.0,
+      &quot;ce_mohm&quot;: 100.0,
+      &quot;ins_mohm&quot;: 100.0,
+      &quot;ins_v&quot;: 500.0,
+      &quot;desat_v&quot;: 9.0,
+      &quot;blank_us&quot;: 2.0,
+      &quot;trip_us&quot;: 1.0,
+      &quot;dc_cap_uf&quot;: 470.0,
+      &quot;gate_mohm&quot;: 100.0,
+      &quot;temperature_c&quot;: 25.0,
+      &quot;thermal_c_j_k&quot;: 0.1,
+      &quot;thermal_r_k_w&quot;: 0.6,
+      &quot;diode_vf_v&quot;: 0.7,
+      &quot;diode_r_factor&quot;: 1.0,
+      &quot;diode_reverse_mohm&quot;: 1000.0
+    }
+  },
+  &quot;station&quot;: {
+    &quot;door_closed&quot;: true,
+    &quot;fixture_clamped&quot;: true,
+    &quot;connector_engaged&quot;: true,
+    &quot;earth_connected&quot;: true,
+    &quot;estop_released&quot;: true,
+    &quot;fiber_connected&quot;: true,
+    &quot;coolant_ready&quot;: true,
+    &quot;source_isolation_feedback&quot;: true
+  },
+  &quot;profile_sha256&quot;: &quot;588621bca0a4510fe936e434b4028027b89c5f088a5ae093a627416f49c02893&quot;,
+  &quot;sources&quot;: [
+    {
+      &quot;title&quot;: &quot;NU IEEE 2026 IGBT test cell_AK_Final, slides 5\u20136, 8\u201311&quot;,
+      &quot;kind&quot;: &quot;User project brief&quot;,
+      &quot;url&quot;: null
+    },
+    {
+      &quot;title&quot;: &quot;onsemi NXH80T120L2Q0S2G, Rev. 6; half-bridge IGBT, tables 1 and 3&quot;,
+      &quot;kind&quot;: &quot;Public surrogate device; not the locomotive module&quot;,
+      &quot;url&quot;: &quot;https://www.onsemi.com/download/data-sheet/pdf/nxh80t120l2q0s2g-d.pdf&quot;
+    },
+    {
+      &quot;title&quot;: &quot;Tektronix: Double Pulse Testing for Power Semiconductor Devices&quot;,
+      &quot;kind&quot;: &quot;Test topology and measured quantities&quot;,
+      &quot;url&quot;: &quot;https://www.tek.com/en/documents/application-note/double-pulse-test-tektronix-afg31000-arbitrary-function-generator&quot;
+    }
+  ],
+  &quot;timeline&quot;: [
+    {
+      &quot;label&quot;: &quot;Station interlocks&quot;,
+      &quot;duration_s&quot;: 0.25
+    },
+    {
+      &quot;label&quot;: &quot;Driver supply and rail checks&quot;,
+      &quot;duration_s&quot;: 0.25
+    },
+    {
+      &quot;label&quot;: &quot;Fiber command and returned-status timing&quot;,
+      &quot;duration_s&quot;: 0.1
+    },
+    {
+      &quot;label&quot;: &quot;Busbar insulation and discharge&quot;,
+      &quot;duration_s&quot;: 1.0078046066098172
+    },
+    {
+      &quot;label&quot;: &quot;Lower static checks&quot;,
+      &quot;duration_s&quot;: 1.25
+    },
+    {
+      &quot;label&quot;: &quot;Upper static checks&quot;,
+      &quot;duration_s&quot;: 1.25
+    },
+    {
+      &quot;label&quot;: &quot;Lower switching precharge and settle&quot;,
+      &quot;duration_s&quot;: 0.611
+    },
+    {
+      &quot;label&quot;: &quot;Lower switching&quot;,
+      &quot;duration_s&quot;: 0.0001002
+    },
+    {
+      &quot;label&quot;: &quot;Lower switching shutdown&quot;,
+      &quot;duration_s&quot;: 1.2163257813047916
+    },
+    {
+      &quot;label&quot;: &quot;Lower thermal reset dwell (estimated)&quot;,
+      &quot;duration_s&quot;: 0.03145825202233947
+    },
+    {
+      &quot;label&quot;: &quot;Lower protection precharge and settle&quot;,
+      &quot;duration_s&quot;: 0.611
+    },
+    {
+      &quot;label&quot;: &quot;Lower protection&quot;,
+      &quot;duration_s&quot;: 0.0001002
+    },
+    {
+      &quot;label&quot;: &quot;Lower protection shutdown&quot;,
+      &quot;duration_s&quot;: 1.2214059739982115
+    },
+    {
+      &quot;label&quot;: &quot;Lower thermal reset dwell (estimated)&quot;,
+      &quot;duration_s&quot;: 0.16996389814085328
+    },
+    {
+      &quot;label&quot;: &quot;Upper switching precharge and settle&quot;,
+      &quot;duration_s&quot;: 0.611
+    },
+    {
+      &quot;label&quot;: &quot;Upper switching&quot;,
+      &quot;duration_s&quot;: 0.0001002
+    },
+    {
+      &quot;label&quot;: &quot;Upper switching shutdown&quot;,
+      &quot;duration_s&quot;: 1.2163257813047916
+    },
+    {
+      &quot;label&quot;: &quot;Upper thermal reset dwell (estimated)&quot;,
+      &quot;duration_s&quot;: 0.03145825202233947
+    },
+    {
+      &quot;label&quot;: &quot;Upper protection precharge and settle&quot;,
+      &quot;duration_s&quot;: 0.611
+    },
+    {
+      &quot;label&quot;: &quot;Upper protection&quot;,
+      &quot;duration_s&quot;: 0.0001002
+    },
+    {
+      &quot;label&quot;: &quot;Upper protection shutdown&quot;,
+      &quot;duration_s&quot;: 1.2214059739982115
+    },
+    {
+      &quot;label&quot;: &quot;Upper thermal reset dwell (estimated)&quot;,
+      &quot;duration_s&quot;: 0.16996389814085328
+    }
+  ]
+}</pre><p>Raw waveform CSVs and numerical diagnostics accompany this report. No physical instrument was controlled and no real IGBT was tested.</p></html>

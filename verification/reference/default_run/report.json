@@ -1,0 +1,2598 @@
+{
+  "run_id": "9929792f-7522-41f2-ac1f-584c71b446b2",
+  "created_utc": "2026-10-17T22:48:00.167166+00:00",
+  "model_version": "2.0.0",
+  "mode": "VIRTUAL_SUITE",
+  "selected_tests": "full",
+  "serial": "REFERENCE-SURROGATE",
+  "operator": "Numerical verification",
+  "parameters": {
+    "bus_v": 400.0,
+    "load_uh": 500.0,
+    "load_r": 0.1,
+    "pulse_us": 75.0,
+    "gap_us": 8.0,
+    "second_us": 3.0,
+    "gate_on": 15.0,
+    "gate_off": -15.0,
+    "gate_r": 4.7,
+    "stray_nh": 50.0,
+    "ron_factor": 1.0,
+    "ce_mohm": 100.0,
+    "ins_mohm": 100.0,
+    "ins_v": 500.0,
+    "desat_v": 9.0,
+    "blank_us": 2.0,
+    "trip_us": 1.0,
+    "dc_cap_uf": 470.0,
+    "gate_mohm": 100.0,
+    "temperature_c": 25.0,
+    "thermal_c_j_k": 0.1,
+    "thermal_r_k_w": 0.6,
+    "diode_vf_v": 0.7,
+    "diode_r_factor": 1.0,
+    "diode_reverse_mohm": 1000.0,
+    "supply_vrms": 100.0,
+    "supply_khz": 25.0,
+    "supply_r": 10.0,
+    "driver_idle_w": 4.0,
+    "driver_pwm_khz": 10.0,
+    "fiber_delay_us": 0.2,
+    "status_delay_us": 0.2,
+    "ins_cap_nf": 10.0,
+    "ins_source_kohm": 100.0,
+    "ins_dwell_s": 1.0,
+    "dump_r_ohm": 1000.0,
+    "precharge_r_ohm": 100.0,
+    "charge_limit_a": 0.5,
+    "fault_r_ohm": 0.05,
+    "fault_l_uh": 2.0
+  },
+  "device_parameters": {
+    "lower": {
+      "bus_v": 400.0,
+      "load_uh": 500.0,
+      "load_r": 0.1,
+      "pulse_us": 75.0,
+      "gap_us": 8.0,
+      "second_us": 3.0,
+      "gate_on": 15.0,
+      "gate_off": -15.0,
+      "gate_r": 4.7,
+      "stray_nh": 50.0,
+      "ron_factor": 1.0,
+      "ce_mohm": 100.0,
+      "ins_mohm": 100.0,
+      "ins_v": 500.0,
+      "desat_v": 9.0,
+      "blank_us": 2.0,
+      "trip_us": 1.0,
+      "dc_cap_uf": 470.0,
+      "gate_mohm": 100.0,
+      "temperature_c": 25.0,
+      "thermal_c_j_k": 0.1,
+      "thermal_r_k_w": 0.6,
+      "diode_vf_v": 0.7,
+      "diode_r_factor": 1.0,
+      "diode_reverse_mohm": 1000.0
+    },
+    "upper": {
+      "bus_v": 400.0,
+      "load_uh": 500.0,
+      "load_r": 0.1,
+      "pulse_us": 75.0,
+      "gap_us": 8.0,
+      "second_us": 3.0,
+      "gate_on": 15.0,
+      "gate_off": -15.0,
+      "gate_r": 4.7,
+      "stray_nh": 50.0,
+      "ron_factor": 1.0,
+      "ce_mohm": 100.0,
+      "ins_mohm": 100.0,
+      "ins_v": 500.0,
+      "desat_v": 9.0,
+      "blank_us": 2.0,
+      "trip_us": 1.0,
+      "dc_cap_uf": 470.0,
+      "gate_mohm": 100.0,
+      "temperature_c": 25.0,
+      "thermal_c_j_k": 0.1,
+      "thermal_r_k_w": 0.6,
+      "diode_vf_v": 0.7,
+      "diode_r_factor": 1.0,
+      "diode_reverse_mohm": 1000.0
+    }
+  },
+  "station": {
+    "door_closed": true,
+    "fixture_clamped": true,
+    "connector_engaged": true,
+    "earth_connected": true,
+    "estop_released": true,
+    "fiber_connected": true,
+    "coolant_ready": true,
+    "source_isolation_feedback": true
+  },
+  "profile": {
+    "id": "NU-IEEE-PROTOTYPE-2.0",
+    "purpose": "Reviewable virtual prototype; not an OEM acceptance specification",
+    "oem_approved": false,
+    "surrogate": "onsemi NXH80T120L2Q0S2G half-bridge IGBT",
+    "limits": {
+      "gate_abs_v": 20,
+      "gate_on_min_v": 14,
+      "gate_on_max_v": 16,
+      "gate_off_min_v": -16,
+      "gate_off_max_v": -14,
+      "blocking_test_v": 1200,
+      "blocking_max_ua": 300,
+      "gate_leak_test_v": 20,
+      "gate_leak_max_na": 300,
+      "static_test_a": 80,
+      "static_vce_max_25c_v": 2.85,
+      "diode_test_a": 0.001,
+      "diode_forward_min_v": 0.2,
+      "diode_forward_max_v": 0.8,
+      "diode_reverse_test_v": 100,
+      "diode_reverse_max_ua": 10,
+      "insulation_max_ma": 2,
+      "insulation_voltage_tolerance_pct": 5,
+      "supply_vrms": 100,
+      "supply_khz": 25,
+      "supply_tolerance_pct": 5,
+      "driver_max_w": 20,
+      "fiber_latency_max_us": 1,
+      "collector_max_v": 1200,
+      "normal_collector_max_a": 201,
+      "normal_diode_max_a": 84,
+      "didt_max_a_us": 5000,
+      "junction_max_c": 150,
+      "desat_to_current_off_max_us": 10,
+      "prototype_fault_to_off_max_us": 5,
+      "on_window_budget_at_400v60a_mj": 2,
+      "off_window_budget_at_400v60a_mj": 4,
+      "energy_reference_v": 400,
+      "energy_reference_a": 60,
+      "energy_window_us": 2,
+      "valid_bus_min_v": 100,
+      "valid_bus_max_v": 600,
+      "valid_requested_current_min_a": 20,
+      "valid_requested_current_max_a": 80,
+      "access_voltage_max_v": 30,
+      "access_current_max_a": 0.1,
+      "access_stored_energy_max_j": 0.25,
+      "discharge_timeout_s": 10,
+      "cooling_reset_rise_c": 0.05
+    },
+    "basis": {
+      "project": "Supplied presentation: +/-15 V gate, <=20 W driver, <=5000 A/us, 0.2-0.8 V diode forward, reverse open, <=2 mA busbar insulation leakage, ~10 us saturation-fault shutdown, 100 Vrms 25 kHz supply, fiber interface.",
+      "surrogate": "onsemi public datasheet: 1200 V, +/-20 V gate, 201 A IGBT pulsed and 84 A diode repetitive peak ratings with conditions; 2.85 V maximum at 80 A/+15 V/25 C; 300 uA blocking and 300 nA gate leakage; 150 C junction maximum.",
+      "engineering": "All tolerances, test currents and dwells omitted by the brief, 100 V/10 uA diode reverse test, optical latency, energy budgets and their linear V*I scaling, access thresholds, validity envelope and reset temperature are explicit prototype assumptions. The 5 us fault deadline is a conservative prototype screen informed by the surrogate's conditional short-circuit rating; it is not a survival model.",
+      "temperature": "VCE limit above 25 C uses +0.0004 V/C assumed offset; thermal C, threshold/gm temperature coefficients and energy scaling are unvalidated."
+    },
+    "qualification_blockers": [
+      "Exact locomotive assembly, semiconductor, driver, diode, busbar and cooling part numbers are unavailable.",
+      "OEM acceptance conditions, limits, interface pinout, optical protocol and fault semantics are unapproved.",
+      "No measured switching, leakage, thermal or fault traces have been supplied for correlation.",
+      "Nonlinear capacitance, diode reverse recovery, detailed driver electronics and full safe operating area are not validated.",
+      "Independent physical protection, insulation coordination, fixture loads and instrument uncertainty require engineering review and commissioning."
+    ]
+  },
+  "profile_sha256": "588621bca0a4510fe936e434b4028027b89c5f088a5ae093a627416f49c02893",
+  "sources": [
+    {
+      "title": "NU IEEE 2026 IGBT test cell_AK_Final, slides 5\u20136, 8\u201311",
+      "kind": "User project brief",
+      "url": null
+    },
+    {
+      "title": "onsemi NXH80T120L2Q0S2G, Rev. 6; half-bridge IGBT, tables 1 and 3",
+      "kind": "Public surrogate device; not the locomotive module",
+      "url": "https://www.onsemi.com/download/data-sheet/pdf/nxh80t120l2q0s2g-d.pdf"
+    },
+    {
+      "title": "Tektronix: Double Pulse Testing for Power Semiconductor Devices",
+      "kind": "Test topology and measured quantities",
+      "url": "https://www.tek.com/en/documents/application-note/double-pulse-test-tektronix-afg31000-arbitrary-function-generator"
+    }
+  ],
+  "tests": [
+    {
+      "key": "station",
+      "label": "Station interlocks",
+      "status": "PASS",
+      "checks": [
+        {
+          "key": "door_closed",
+          "label": "Door closed",
+          "value": true,
+          "limit": true,
+          "unit": "",
+          "status": "PASS",
+          "basis": "Virtual safety-chain input; not measured hardware"
+        },
+        {
+          "key": "fixture_clamped",
+          "label": "Module clamped",
+          "value": true,
+          "limit": true,
+          "unit": "",
+          "status": "PASS",
+          "basis": "Virtual safety-chain input; not measured hardware"
+        },
+        {
+          "key": "connector_engaged",
+          "label": "Test connector engaged",
+          "value": true,
+          "limit": true,
+          "unit": "",
+          "status": "PASS",
+          "basis": "Virtual safety-chain input; not measured hardware"
+        },
+        {
+          "key": "earth_connected",
+          "label": "Protective earth connected",
+          "value": true,
+          "limit": true,
+          "unit": "",
+          "status": "PASS",
+          "basis": "Virtual safety-chain input; not measured hardware"
+        },
+        {
+          "key": "estop_released",
+          "label": "Emergency stop released",
+          "value": true,
+          "limit": true,
+          "unit": "",
+          "status": "PASS",
+          "basis": "Virtual safety-chain input; not measured hardware"
+        },
+        {
+          "key": "fiber_connected",
+          "label": "Command/status fiber connected",
+          "value": true,
+          "limit": true,
+          "unit": "",
+          "status": "PASS",
+          "basis": "Virtual safety-chain input; not measured hardware"
+        },
+        {
+          "key": "coolant_ready",
+          "label": "Cooling available",
+          "value": true,
+          "limit": true,
+          "unit": "",
+          "status": "PASS",
+          "basis": "Virtual safety-chain input; not measured hardware"
+        },
+        {
+          "key": "source_isolation_feedback",
+          "label": "Source isolation contact open feedback",
+          "value": true,
+          "limit": true,
+          "unit": "",
+          "status": "PASS",
+          "basis": "Virtual safety-chain input; not measured hardware"
+        }
+      ],
+      "duration_s": 0.25
+    },
+    {
+      "key": "driver",
+      "label": "Driver supply and rail checks",
+      "status": "PASS",
+      "checks": [
+        {
+          "key": "supply_voltage",
+          "label": "Loaded driver supply",
+          "value": 99.57418683145494,
+          "limit": "95\u2013105",
+          "unit": "Vrms",
+          "status": "PASS",
+          "basis": "100 Vrms project target; \u00b15% prototype tolerance; constant-power load"
+        },
+        {
+          "key": "supply_frequency",
+          "label": "Driver supply frequency",
+          "value": 25.0,
+          "limit": "23.75\u201326.25",
+          "unit": "kHz",
+          "status": "PASS",
+          "basis": "25 kHz project target; \u00b15% assumed"
+        },
+        {
+          "key": "driver_power",
+          "label": "Driver power per channel",
+          "value": 4.24,
+          "limit": 20,
+          "unit": "W",
+          "status": "PASS",
+          "basis": "Project 20 W maximum; idle input plus Qg \u00d7 gate swing \u00d7 activity frequency"
+        },
+        {
+          "key": "rail_on",
+          "label": "Effective ON rail",
+          "value": 14.93612802471824,
+          "limit": "14\u201316",
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Project +15 V; \u00b11 V assumed. Idealized isolated rail conversion"
+        },
+        {
+          "key": "rail_off",
+          "label": "Effective OFF rail",
+          "value": -14.93612802471824,
+          "limit": "\u221216 to \u221214",
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Project \u221215 V; \u00b11 V assumed. Supply frequency is not gate PWM frequency"
+        }
+      ],
+      "duration_s": 0.25,
+      "metrics": {
+        "power_per_channel_w": 4.24,
+        "loaded_supply_vrms": 99.57418683145494,
+        "effective_gate_on_v": 14.93612802471824,
+        "effective_gate_off_v": -14.93612802471824
+      },
+      "trace_columns": [
+        "time_s",
+        "supply_v"
+      ]
+    },
+    {
+      "key": "fiber",
+      "label": "Fiber command and returned-status timing",
+      "status": "PASS",
+      "checks": [
+        {
+          "key": "command_delay",
+          "label": "Command propagation delay",
+          "value": 0.2,
+          "limit": 1,
+          "unit": "\u00b5s",
+          "status": "PASS",
+          "basis": "Logical transport delay; 1 \u00b5s assumed, no OEM optical protocol"
+        },
+        {
+          "key": "status_delay",
+          "label": "Fault-status propagation delay",
+          "value": 0.2,
+          "limit": 1,
+          "unit": "\u00b5s",
+          "status": "PASS",
+          "basis": "Logical returned-status delay; local trip does not wait for laptop status"
+        }
+      ],
+      "duration_s": 0.1
+    },
+    {
+      "key": "insulation",
+      "label": "Busbar insulation and discharge",
+      "status": "PASS",
+      "checks": [
+        {
+          "key": "ins_voltage",
+          "label": "Insulation voltage attained",
+          "value": 0.0999000999001055,
+          "limit": 5,
+          "unit": "% error",
+          "status": "PASS",
+          "basis": "Checks source droop and RC settling at the selected provisional voltage"
+        },
+        {
+          "key": "ins_leak",
+          "label": "Insulation leakage after dwell",
+          "value": 0.004995004995004995,
+          "limit": 2,
+          "unit": "mA",
+          "status": "PASS",
+          "basis": "Project \u22642 mA; voltage and dwell await OEM approval"
+        },
+        {
+          "key": "ins_discharge",
+          "label": "Insulation node discharged",
+          "value": 0.20213840997256402,
+          "limit": 30,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Separate current-limited insulation circuit; provisional access threshold"
+        }
+      ],
+      "duration_s": 1.0078046066098172,
+      "metrics": {
+        "dwell_s": 1.0,
+        "time_constant_s": 0.000999000999000999,
+        "steady_voltage_v": 499.5004995004995,
+        "measured_voltage_v": 499.5004995004995,
+        "leakage_ma": 0.004995004995004995
+      },
+      "trace_columns": [
+        "time_s",
+        "insulation_voltage_v",
+        "leakage_ma"
+      ]
+    },
+    {
+      "key": "lower_static",
+      "label": "Lower static checks",
+      "status": "PASS",
+      "checks": [
+        {
+          "key": "gate_leak",
+          "label": "Gate leakage at +20 V",
+          "value": 200.0,
+          "limit": 300,
+          "unit": "nA",
+          "status": "PASS",
+          "basis": "Surrogate maximum at 20 V; resistive leakage approximation"
+        },
+        {
+          "key": "blocking",
+          "label": "Blocking leakage at 1200 V, gate 0 V",
+          "value": 12.0,
+          "limit": 300,
+          "unit": "\u00b5A",
+          "status": "PASS",
+          "basis": "Surrogate maximum; separate current-limited static stimulus, not DC-link charging"
+        },
+        {
+          "key": "vcesat",
+          "label": "Static VCE at 80 A, gate +15 V",
+          "value": 2.0499999996061504,
+          "limit": 2.85,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "2.85 V surrogate maximum at 25 \u00b0C; temperature offset above 25 \u00b0C is assumed"
+        },
+        {
+          "key": "diode_forward",
+          "label": "Diode forward voltage at 1 mA",
+          "value": 0.70003525,
+          "limit": "0.2\u20130.8",
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Project voltage range; 1 mA stimulus is assumed, not power-current VF"
+        },
+        {
+          "key": "diode_reverse",
+          "label": "Diode reverse leakage at 100 V",
+          "value": 0.1,
+          "limit": 10,
+          "unit": "\u00b5A",
+          "status": "PASS",
+          "basis": "Quantifies project \u201copen\u201d; voltage and 10 \u00b5A threshold are provisional"
+        }
+      ],
+      "duration_s": 1.25,
+      "stimulus": {
+        "gate_leak_v": 20,
+        "blocking_v": 1200,
+        "vcesat_current_a": 80,
+        "vcesat_gate_v": 15,
+        "diode_forward_a": 0.001,
+        "diode_reverse_v": 100,
+        "per_check_settle_and_acquisition_s": 0.25
+      },
+      "note": "Independent low-energy static instruments; 80 A VCE measurement is a brief controlled-current pulse. No damage or breakdown model."
+    },
+    {
+      "key": "upper_static",
+      "label": "Upper static checks",
+      "status": "PASS",
+      "checks": [
+        {
+          "key": "gate_leak",
+          "label": "Gate leakage at +20 V",
+          "value": 200.0,
+          "limit": 300,
+          "unit": "nA",
+          "status": "PASS",
+          "basis": "Surrogate maximum at 20 V; resistive leakage approximation"
+        },
+        {
+          "key": "blocking",
+          "label": "Blocking leakage at 1200 V, gate 0 V",
+          "value": 12.0,
+          "limit": 300,
+          "unit": "\u00b5A",
+          "status": "PASS",
+          "basis": "Surrogate maximum; separate current-limited static stimulus, not DC-link charging"
+        },
+        {
+          "key": "vcesat",
+          "label": "Static VCE at 80 A, gate +15 V",
+          "value": 2.0499999996061504,
+          "limit": 2.85,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "2.85 V surrogate maximum at 25 \u00b0C; temperature offset above 25 \u00b0C is assumed"
+        },
+        {
+          "key": "diode_forward",
+          "label": "Diode forward voltage at 1 mA",
+          "value": 0.70003525,
+          "limit": "0.2\u20130.8",
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Project voltage range; 1 mA stimulus is assumed, not power-current VF"
+        },
+        {
+          "key": "diode_reverse",
+          "label": "Diode reverse leakage at 100 V",
+          "value": 0.1,
+          "limit": 10,
+          "unit": "\u00b5A",
+          "status": "PASS",
+          "basis": "Quantifies project \u201copen\u201d; voltage and 10 \u00b5A threshold are provisional"
+        }
+      ],
+      "duration_s": 1.25,
+      "stimulus": {
+        "gate_leak_v": 20,
+        "blocking_v": 1200,
+        "vcesat_current_a": 80,
+        "vcesat_gate_v": 15,
+        "diode_forward_a": 0.001,
+        "diode_reverse_v": 100,
+        "per_check_settle_and_acquisition_s": 0.25
+      },
+      "note": "Independent low-energy static instruments; 80 A VCE measurement is a brief controlled-current pulse. No damage or breakdown model."
+    },
+    {
+      "key": "lower_switching",
+      "label": "Lower switching",
+      "status": "PASS",
+      "checks": [
+        {
+          "key": "vce",
+          "label": "Collector voltage ceiling",
+          "value": 547.8619530343922,
+          "limit": 1200,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Public surrogate absolute rating; not a complete SOA assessment"
+        },
+        {
+          "key": "gate_abs",
+          "label": "Absolute gate voltage",
+          "value": 14.936150575924243,
+          "limit": 20,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Public surrogate absolute rating"
+        },
+        {
+          "key": "slew",
+          "label": "Current slew over 10 ns",
+          "value": 1450.7968429573793,
+          "limit": 5000,
+          "unit": "A/\u00b5s",
+          "status": "PASS",
+          "basis": "Project brief maximum; 10 ns measurement aperture is assumed, not specified in the brief"
+        },
+        {
+          "key": "temperature",
+          "label": "Estimated peak junction temperature",
+          "value": 25.084478820373473,
+          "limit": 150,
+          "unit": "\u00b0C",
+          "status": "PASS",
+          "basis": "Surrogate maximum; illustrative lumped thermal model, not validated SOA"
+        },
+        {
+          "key": "ic",
+          "label": "Collector current ceiling",
+          "value": 65.31789745511792,
+          "limit": 201,
+          "unit": "A",
+          "status": "PASS",
+          "basis": "Public surrogate pulsed-current ceiling; pulse and thermal SOA not qualified"
+        },
+        {
+          "key": "diode",
+          "label": "Freewheel current ceiling",
+          "value": 61.31969648990194,
+          "limit": 84,
+          "unit": "A",
+          "status": "PASS",
+          "basis": "Public surrogate diode repetitive peak ceiling; thermal conditions not qualified"
+        },
+        {
+          "key": "gate_on",
+          "label": "Settled ON gate voltage",
+          "value": 14.936150327549377,
+          "limit": "14\u201316",
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Project target +15 V; \u00b11 V tolerance is an engineering assumption"
+        },
+        {
+          "key": "current_build",
+          "label": "First-pulse current tracking",
+          "value": 0.3771030135178561,
+          "limit": 10,
+          "unit": "%",
+          "status": "PASS",
+          "basis": "Engineering check against series-RL current, assumed constant 2.05 V device drop"
+        },
+        {
+          "key": "desat",
+          "label": "Uncommanded protection trip",
+          "value": 0,
+          "limit": 0,
+          "unit": "trips",
+          "status": "PASS",
+          "basis": "A normal double pulse must complete without desaturation shutdown"
+        },
+        {
+          "key": "final_off_gate",
+          "label": "OFF gate after final pulse",
+          "value": -14.936128332537944,
+          "limit": "\u221216 to \u221214",
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Calculated final transition, not the initialized OFF state"
+        },
+        {
+          "key": "turn_on_window_mj",
+          "label": "Second turn-on energy in 2 \u00b5s",
+          "value": 1.0038390521797433,
+          "limit": 1.9749012116537374,
+          "unit": "mJ",
+          "status": "PASS",
+          "basis": "Prototype energy budget scaled by requested V \u00d7 ideal-RL current and assumed temperature factor; not datasheet Eon/Eoff"
+        },
+        {
+          "key": "turn_off_window_mj",
+          "label": "First turn-off energy in 2 \u00b5s",
+          "value": 2.1578309137275697,
+          "limit": 3.949802423307475,
+          "unit": "mJ",
+          "status": "PASS",
+          "basis": "Prototype energy budget scaled by requested V \u00d7 ideal-RL current and assumed temperature factor; not datasheet Eon/Eoff"
+        },
+        {
+          "key": "profile_envelope",
+          "label": "Requested current / bus in comparison envelope",
+          "value": "59.247 A / 400.000 V",
+          "limit": "20\u201380 A / 100\u2013600 V",
+          "unit": "",
+          "status": "PASS",
+          "basis": "Outside this provisional comparison envelope, no complete model acceptance is issued"
+        }
+      ],
+      "duration_s": 0.0001002,
+      "metrics": {
+        "peak_vce_v": 547.8619530343922,
+        "peak_ic_a": 65.31789745511792,
+        "peak_diode_a": 61.31969648990194,
+        "peak_gate_v": 14.936150575924243,
+        "min_gate_v": -14.936140604227269,
+        "max_didt_a_us": 1450.7968429573793,
+        "off_current_ma": 0.004000030287286758,
+        "first_pulse_current_a": 59.02361399011772,
+        "expected_rl_current_a": 59.247036349612124,
+        "tracking_error_pct": 0.3771030135178561,
+        "on_vce_v": 1.6467575212608065,
+        "insulation_leakage_ma": 0.005,
+        "device_energy_mj": 8.450169138851109,
+        "turn_on_window_mj": 1.0038390521797433,
+        "turn_off_window_mj": 2.1578309137275697,
+        "trip_detect_us": null,
+        "trip_off_us": null,
+        "protection_response_us": null,
+        "fault_to_off_us": null,
+        "fault_insert_us": null,
+        "final_bus_v": 394.84223421068884,
+        "final_load_a": 61.12748708112757,
+        "final_fault_a": 0.0,
+        "final_diode_a": 61.127483354077164,
+        "initial_temperature_c": 25.0,
+        "peak_temperature_c": 25.084478820373473,
+        "final_temperature_c": 25.084464151842692,
+        "bus_droop_pct": 1.289441447327789
+      },
+      "solver": {
+        "method": "Backward Euler, scalar Newton KCL",
+        "edge_step_ns": 0.5,
+        "quiet_step_ns": 20.0,
+        "steps": 20614,
+        "max_newton_iterations": 5,
+        "max_kcl_residual_a": 9.979803643438799e-09,
+        "energy_balance_residual_j": 6.993426768676231e-11,
+        "numerical_dissipation_j": 0.00024362199737697112,
+        "source_energy_j": 4.268311668072096e-05,
+        "stored_energy_change_j": -0.029172915446530112,
+        "device_loss_j": 0.00845016913885111,
+        "gate_resistor_loss_j": 3.9204121090459e-05,
+        "load_resistor_loss_j": 0.017143454804532974,
+        "diode_loss_j": 0.003339135908833082,
+        "diode_shunt_loss_j": 1.2301227493821593e-08,
+        "gate_insulation_loss_j": 2.2136447693490956e-10,
+        "fault_path_loss_j": 0.0
+      }
+    },
+    {
+      "key": "lower_protection",
+      "label": "Lower protection",
+      "status": "PASS",
+      "checks": [
+        {
+          "key": "vce",
+          "label": "Collector voltage ceiling",
+          "value": 507.5743922960515,
+          "limit": 1200,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Public surrogate absolute rating; not a complete SOA assessment"
+        },
+        {
+          "key": "gate_abs",
+          "label": "Absolute gate voltage",
+          "value": 16.543073663930443,
+          "limit": 20,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Public surrogate absolute rating"
+        },
+        {
+          "key": "slew",
+          "label": "Current slew over 10 ns",
+          "value": 1861.5454001871456,
+          "limit": 5000,
+          "unit": "A/\u00b5s",
+          "status": "PASS",
+          "basis": "Project brief maximum; 10 ns measurement aperture is assumed, not specified in the brief"
+        },
+        {
+          "key": "temperature",
+          "label": "Estimated peak junction temperature",
+          "value": 25.85090219159566,
+          "limit": 150,
+          "unit": "\u00b0C",
+          "status": "PASS",
+          "basis": "Surrogate maximum; illustrative lumped thermal model, not validated SOA"
+        },
+        {
+          "key": "fault_stimulus",
+          "label": "Fault detected after short insertion",
+          "value": 5.30550000000018,
+          "limit": 4.2,
+          "unit": "\u00b5s",
+          "status": "PASS",
+          "basis": "A trip before the applied fault does not demonstrate the required protection response"
+        },
+        {
+          "key": "detection_response",
+          "label": "Detection to current below 10%",
+          "value": 1.259500000000129,
+          "limit": 10,
+          "unit": "\u00b5s",
+          "status": "PASS",
+          "basis": "Project ~10 \u00b5s requirement; 10% of detection current endpoint is explicitly assumed"
+        },
+        {
+          "key": "fault_response",
+          "label": "Fault insertion to current below 10%",
+          "value": 2.3650000000003084,
+          "limit": 5,
+          "unit": "\u00b5s",
+          "status": "PASS",
+          "basis": "Additional 5 \u00b5s prototype deadline; conditional surrogate rating does not prove survival"
+        },
+        {
+          "key": "fault_voltage_scope",
+          "label": "Fault bus within prototype envelope",
+          "value": 400.0,
+          "limit": 600,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Surrogate short-circuit rating is conditional at 600 V/+15 V and \u2264150 \u00b0C; this is only a boundary screen"
+        }
+      ],
+      "duration_s": 0.0001002,
+      "metrics": {
+        "peak_vce_v": 507.5743922960515,
+        "peak_ic_a": 277.14347263073705,
+        "peak_diode_a": 260.1840330824189,
+        "peak_gate_v": 16.543073663930443,
+        "min_gate_v": -14.944347361109578,
+        "max_didt_a_us": 1861.5454001871456,
+        "off_current_ma": 0.004000030287286758,
+        "first_pulse_current_a": 2.075964699475781,
+        "expected_rl_current_a": 59.247036349612124,
+        "tracking_error_pct": 96.49608684690037,
+        "on_vce_v": 400.06316973136717,
+        "insulation_leakage_ma": 0.005,
+        "device_energy_mj": 85.09255218829652,
+        "turn_on_window_mj": 3.229808410291471e-06,
+        "turn_off_window_mj": 3.2006967402526625e-06,
+        "trip_detect_us": 5.30550000000018,
+        "trip_off_us": 6.30550000000018,
+        "protection_response_us": 1.259500000000129,
+        "fault_to_off_us": 2.3650000000003084,
+        "fault_insert_us": 4.2,
+        "final_bus_v": 399.1332011629402,
+        "final_load_a": 2.038034178899635,
+        "final_fault_a": -2.0380301984974043,
+        "final_diode_a": 0.0,
+        "initial_temperature_c": 25.0,
+        "peak_temperature_c": 25.85090219159566,
+        "final_temperature_c": 25.849590646483396,
+        "bus_droop_pct": 0.2166997092649439,
+        "returned_fault_status_us": 5.50550000000018
+      },
+      "solver": {
+        "method": "Backward Euler, scalar Newton KCL",
+        "edge_step_ns": 0.5,
+        "quiet_step_ns": 20.0,
+        "steps": 28415,
+        "max_newton_iterations": 4,
+        "max_kcl_residual_a": 9.934396871210492e-09,
+        "energy_balance_residual_j": 1.3869773602873505e-10,
+        "numerical_dissipation_j": 5.692332582633635e-05,
+        "source_energy_j": 1.7288048595451276e-05,
+        "stored_energy_change_j": -0.16173919337082765,
+        "device_loss_j": 0.08509255218829652,
+        "gate_resistor_loss_j": 1.929564978855181e-05,
+        "load_resistor_loss_j": 4.665715524344577e-05,
+        "diode_loss_j": 0.03255614293626015,
+        "diode_shunt_loss_j": 5.098954231774287e-10,
+        "gate_insulation_loss_j": 2.2281591518373363e-10,
+        "fault_path_loss_j": 0.04398490929259902
+      }
+    },
+    {
+      "key": "upper_switching",
+      "label": "Upper switching",
+      "status": "PASS",
+      "checks": [
+        {
+          "key": "vce",
+          "label": "Collector voltage ceiling",
+          "value": 547.8619530343922,
+          "limit": 1200,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Public surrogate absolute rating; not a complete SOA assessment"
+        },
+        {
+          "key": "gate_abs",
+          "label": "Absolute gate voltage",
+          "value": 14.936150575924243,
+          "limit": 20,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Public surrogate absolute rating"
+        },
+        {
+          "key": "slew",
+          "label": "Current slew over 10 ns",
+          "value": 1450.7968429573793,
+          "limit": 5000,
+          "unit": "A/\u00b5s",
+          "status": "PASS",
+          "basis": "Project brief maximum; 10 ns measurement aperture is assumed, not specified in the brief"
+        },
+        {
+          "key": "temperature",
+          "label": "Estimated peak junction temperature",
+          "value": 25.084478820373473,
+          "limit": 150,
+          "unit": "\u00b0C",
+          "status": "PASS",
+          "basis": "Surrogate maximum; illustrative lumped thermal model, not validated SOA"
+        },
+        {
+          "key": "ic",
+          "label": "Collector current ceiling",
+          "value": 65.31789745511792,
+          "limit": 201,
+          "unit": "A",
+          "status": "PASS",
+          "basis": "Public surrogate pulsed-current ceiling; pulse and thermal SOA not qualified"
+        },
+        {
+          "key": "diode",
+          "label": "Freewheel current ceiling",
+          "value": 61.31969648990194,
+          "limit": 84,
+          "unit": "A",
+          "status": "PASS",
+          "basis": "Public surrogate diode repetitive peak ceiling; thermal conditions not qualified"
+        },
+        {
+          "key": "gate_on",
+          "label": "Settled ON gate voltage",
+          "value": 14.936150327549377,
+          "limit": "14\u201316",
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Project target +15 V; \u00b11 V tolerance is an engineering assumption"
+        },
+        {
+          "key": "current_build",
+          "label": "First-pulse current tracking",
+          "value": 0.3771030135178561,
+          "limit": 10,
+          "unit": "%",
+          "status": "PASS",
+          "basis": "Engineering check against series-RL current, assumed constant 2.05 V device drop"
+        },
+        {
+          "key": "desat",
+          "label": "Uncommanded protection trip",
+          "value": 0,
+          "limit": 0,
+          "unit": "trips",
+          "status": "PASS",
+          "basis": "A normal double pulse must complete without desaturation shutdown"
+        },
+        {
+          "key": "final_off_gate",
+          "label": "OFF gate after final pulse",
+          "value": -14.936128332537944,
+          "limit": "\u221216 to \u221214",
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Calculated final transition, not the initialized OFF state"
+        },
+        {
+          "key": "turn_on_window_mj",
+          "label": "Second turn-on energy in 2 \u00b5s",
+          "value": 1.0038390521797433,
+          "limit": 1.9749012116537374,
+          "unit": "mJ",
+          "status": "PASS",
+          "basis": "Prototype energy budget scaled by requested V \u00d7 ideal-RL current and assumed temperature factor; not datasheet Eon/Eoff"
+        },
+        {
+          "key": "turn_off_window_mj",
+          "label": "First turn-off energy in 2 \u00b5s",
+          "value": 2.1578309137275697,
+          "limit": 3.949802423307475,
+          "unit": "mJ",
+          "status": "PASS",
+          "basis": "Prototype energy budget scaled by requested V \u00d7 ideal-RL current and assumed temperature factor; not datasheet Eon/Eoff"
+        },
+        {
+          "key": "profile_envelope",
+          "label": "Requested current / bus in comparison envelope",
+          "value": "59.247 A / 400.000 V",
+          "limit": "20\u201380 A / 100\u2013600 V",
+          "unit": "",
+          "status": "PASS",
+          "basis": "Outside this provisional comparison envelope, no complete model acceptance is issued"
+        }
+      ],
+      "duration_s": 0.0001002,
+      "metrics": {
+        "peak_vce_v": 547.8619530343922,
+        "peak_ic_a": 65.31789745511792,
+        "peak_diode_a": 61.31969648990194,
+        "peak_gate_v": 14.936150575924243,
+        "min_gate_v": -14.936140604227269,
+        "max_didt_a_us": 1450.7968429573793,
+        "off_current_ma": 0.004000030287286758,
+        "first_pulse_current_a": 59.02361399011772,
+        "expected_rl_current_a": 59.247036349612124,
+        "tracking_error_pct": 0.3771030135178561,
+        "on_vce_v": 1.6467575212608065,
+        "insulation_leakage_ma": 0.005,
+        "device_energy_mj": 8.450169138851109,
+        "turn_on_window_mj": 1.0038390521797433,
+        "turn_off_window_mj": 2.1578309137275697,
+        "trip_detect_us": null,
+        "trip_off_us": null,
+        "protection_response_us": null,
+        "fault_to_off_us": null,
+        "fault_insert_us": null,
+        "final_bus_v": 394.84223421068884,
+        "final_load_a": 61.12748708112757,
+        "final_fault_a": 0.0,
+        "final_diode_a": 61.127483354077164,
+        "initial_temperature_c": 25.0,
+        "peak_temperature_c": 25.084478820373473,
+        "final_temperature_c": 25.084464151842692,
+        "bus_droop_pct": 1.289441447327789
+      },
+      "solver": {
+        "method": "Backward Euler, scalar Newton KCL",
+        "edge_step_ns": 0.5,
+        "quiet_step_ns": 20.0,
+        "steps": 20614,
+        "max_newton_iterations": 5,
+        "max_kcl_residual_a": 9.979803643438799e-09,
+        "energy_balance_residual_j": 6.993426768676231e-11,
+        "numerical_dissipation_j": 0.00024362199737697112,
+        "source_energy_j": 4.268311668072096e-05,
+        "stored_energy_change_j": -0.029172915446530112,
+        "device_loss_j": 0.00845016913885111,
+        "gate_resistor_loss_j": 3.9204121090459e-05,
+        "load_resistor_loss_j": 0.017143454804532974,
+        "diode_loss_j": 0.003339135908833082,
+        "diode_shunt_loss_j": 1.2301227493821593e-08,
+        "gate_insulation_loss_j": 2.2136447693490956e-10,
+        "fault_path_loss_j": 0.0
+      }
+    },
+    {
+      "key": "upper_protection",
+      "label": "Upper protection",
+      "status": "PASS",
+      "checks": [
+        {
+          "key": "vce",
+          "label": "Collector voltage ceiling",
+          "value": 507.5743922960515,
+          "limit": 1200,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Public surrogate absolute rating; not a complete SOA assessment"
+        },
+        {
+          "key": "gate_abs",
+          "label": "Absolute gate voltage",
+          "value": 16.543073663930443,
+          "limit": 20,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Public surrogate absolute rating"
+        },
+        {
+          "key": "slew",
+          "label": "Current slew over 10 ns",
+          "value": 1861.5454001871456,
+          "limit": 5000,
+          "unit": "A/\u00b5s",
+          "status": "PASS",
+          "basis": "Project brief maximum; 10 ns measurement aperture is assumed, not specified in the brief"
+        },
+        {
+          "key": "temperature",
+          "label": "Estimated peak junction temperature",
+          "value": 25.85090219159566,
+          "limit": 150,
+          "unit": "\u00b0C",
+          "status": "PASS",
+          "basis": "Surrogate maximum; illustrative lumped thermal model, not validated SOA"
+        },
+        {
+          "key": "fault_stimulus",
+          "label": "Fault detected after short insertion",
+          "value": 5.30550000000018,
+          "limit": 4.2,
+          "unit": "\u00b5s",
+          "status": "PASS",
+          "basis": "A trip before the applied fault does not demonstrate the required protection response"
+        },
+        {
+          "key": "detection_response",
+          "label": "Detection to current below 10%",
+          "value": 1.259500000000129,
+          "limit": 10,
+          "unit": "\u00b5s",
+          "status": "PASS",
+          "basis": "Project ~10 \u00b5s requirement; 10% of detection current endpoint is explicitly assumed"
+        },
+        {
+          "key": "fault_response",
+          "label": "Fault insertion to current below 10%",
+          "value": 2.3650000000003084,
+          "limit": 5,
+          "unit": "\u00b5s",
+          "status": "PASS",
+          "basis": "Additional 5 \u00b5s prototype deadline; conditional surrogate rating does not prove survival"
+        },
+        {
+          "key": "fault_voltage_scope",
+          "label": "Fault bus within prototype envelope",
+          "value": 400.0,
+          "limit": 600,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Surrogate short-circuit rating is conditional at 600 V/+15 V and \u2264150 \u00b0C; this is only a boundary screen"
+        }
+      ],
+      "duration_s": 0.0001002,
+      "metrics": {
+        "peak_vce_v": 507.5743922960515,
+        "peak_ic_a": 277.14347263073705,
+        "peak_diode_a": 260.1840330824189,
+        "peak_gate_v": 16.543073663930443,
+        "min_gate_v": -14.944347361109578,
+        "max_didt_a_us": 1861.5454001871456,
+        "off_current_ma": 0.004000030287286758,
+        "first_pulse_current_a": 2.075964699475781,
+        "expected_rl_current_a": 59.247036349612124,
+        "tracking_error_pct": 96.49608684690037,
+        "on_vce_v": 400.06316973136717,
+        "insulation_leakage_ma": 0.005,
+        "device_energy_mj": 85.09255218829652,
+        "turn_on_window_mj": 3.229808410291471e-06,
+        "turn_off_window_mj": 3.2006967402526625e-06,
+        "trip_detect_us": 5.30550000000018,
+        "trip_off_us": 6.30550000000018,
+        "protection_response_us": 1.259500000000129,
+        "fault_to_off_us": 2.3650000000003084,
+        "fault_insert_us": 4.2,
+        "final_bus_v": 399.1332011629402,
+        "final_load_a": 2.038034178899635,
+        "final_fault_a": -2.0380301984974043,
+        "final_diode_a": 0.0,
+        "initial_temperature_c": 25.0,
+        "peak_temperature_c": 25.85090219159566,
+        "final_temperature_c": 25.849590646483396,
+        "bus_droop_pct": 0.2166997092649439,
+        "returned_fault_status_us": 5.50550000000018
+      },
+      "solver": {
+        "method": "Backward Euler, scalar Newton KCL",
+        "edge_step_ns": 0.5,
+        "quiet_step_ns": 20.0,
+        "steps": 28415,
+        "max_newton_iterations": 4,
+        "max_kcl_residual_a": 9.934396871210492e-09,
+        "energy_balance_residual_j": 1.3869773602873505e-10,
+        "numerical_dissipation_j": 5.692332582633635e-05,
+        "source_energy_j": 1.7288048595451276e-05,
+        "stored_energy_change_j": -0.16173919337082765,
+        "device_loss_j": 0.08509255218829652,
+        "gate_resistor_loss_j": 1.929564978855181e-05,
+        "load_resistor_loss_j": 4.665715524344577e-05,
+        "diode_loss_j": 0.03255614293626015,
+        "diode_shunt_loss_j": 5.098954231774287e-10,
+        "gate_insulation_loss_j": 2.2281591518373363e-10,
+        "fault_path_loss_j": 0.04398490929259902
+      }
+    }
+  ],
+  "shutdowns": [
+    {
+      "key": "lower_switching_shutdown",
+      "label": "Lower switching shutdown",
+      "status": "PASS",
+      "checks": [
+        {
+          "key": "isolation",
+          "label": "Source isolation confirmed",
+          "value": true,
+          "limit": true,
+          "unit": "",
+          "status": "PASS",
+          "basis": "Physical contact feedback is represented as an explicit station input"
+        },
+        {
+          "key": "bus_safe",
+          "label": "Residual DC-link voltage",
+          "value": 29.682542660669633,
+          "limit": 30,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Prototype access threshold; not a universal safe-touch declaration"
+        },
+        {
+          "key": "current_safe",
+          "label": "Residual current upper bound",
+          "value": 8.140237204284522e-142,
+          "limit": 0.1,
+          "unit": "A",
+          "status": "PASS",
+          "basis": "Passive RL envelope includes signed companion-path energy"
+        },
+        {
+          "key": "energy_safe",
+          "label": "Residual stored energy",
+          "value": 0.20711251132439226,
+          "limit": 0.25,
+          "unit": "J",
+          "status": "PASS",
+          "basis": "DC capacitor plus magnetic energy and conservative gate-capacitance allowance"
+        }
+      ],
+      "duration_s": 1.2163257813047916,
+      "access_permitted": true,
+      "trace_columns": [
+        "time_s",
+        "dc_bus_v",
+        "current_bound_a",
+        "stored_energy_j"
+      ],
+      "metrics": {
+        "initial_stored_energy_j": 37.57089244052448,
+        "final_stored_energy_j": 0.20711251132439226,
+        "peak_dump_power_w": 155.90038991648845,
+        "dump_energy_j": 36.429544095756206
+      },
+      "note": "Post-pulse passive-network envelope; no continuation of the nanosecond transistor solver. A failed shutdown blocks virtual fixture access."
+    },
+    {
+      "key": "lower_protection_shutdown",
+      "label": "Lower protection shutdown",
+      "status": "PASS",
+      "checks": [
+        {
+          "key": "isolation",
+          "label": "Source isolation confirmed",
+          "value": true,
+          "limit": true,
+          "unit": "",
+          "status": "PASS",
+          "basis": "Physical contact feedback is represented as an explicit station input"
+        },
+        {
+          "key": "bus_safe",
+          "label": "Residual DC-link voltage",
+          "value": 29.682542660669636,
+          "limit": 30,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Prototype access threshold; not a universal safe-touch declaration"
+        },
+        {
+          "key": "current_safe",
+          "label": "Residual current upper bound",
+          "value": 2.4784518441670796e-143,
+          "limit": 0.1,
+          "unit": "A",
+          "status": "PASS",
+          "basis": "Passive RL envelope includes signed companion-path energy"
+        },
+        {
+          "key": "energy_safe",
+          "label": "Residual stored energy",
+          "value": 0.20710457052799164,
+          "limit": 0.25,
+          "unit": "J",
+          "status": "PASS",
+          "basis": "DC capacitor plus magnetic energy and conservative gate-capacitance allowance"
+        }
+      ],
+      "duration_s": 1.2214059739982115,
+      "access_permitted": true,
+      "trace_columns": [
+        "time_s",
+        "dc_bus_v",
+        "current_bound_a",
+        "stored_energy_j"
+      ],
+      "metrics": {
+        "initial_stored_energy_j": 37.43831796889047,
+        "final_stored_energy_j": 0.20710457052799164,
+        "peak_dump_power_w": 159.30731227057612,
+        "dump_energy_j": 37.2301708489668
+      },
+      "note": "Post-pulse passive-network envelope; no continuation of the nanosecond transistor solver. A failed shutdown blocks virtual fixture access."
+    },
+    {
+      "key": "upper_switching_shutdown",
+      "label": "Upper switching shutdown",
+      "status": "PASS",
+      "checks": [
+        {
+          "key": "isolation",
+          "label": "Source isolation confirmed",
+          "value": true,
+          "limit": true,
+          "unit": "",
+          "status": "PASS",
+          "basis": "Physical contact feedback is represented as an explicit station input"
+        },
+        {
+          "key": "bus_safe",
+          "label": "Residual DC-link voltage",
+          "value": 29.682542660669633,
+          "limit": 30,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Prototype access threshold; not a universal safe-touch declaration"
+        },
+        {
+          "key": "current_safe",
+          "label": "Residual current upper bound",
+          "value": 8.140237204284522e-142,
+          "limit": 0.1,
+          "unit": "A",
+          "status": "PASS",
+          "basis": "Passive RL envelope includes signed companion-path energy"
+        },
+        {
+          "key": "energy_safe",
+          "label": "Residual stored energy",
+          "value": 0.20711251132439226,
+          "limit": 0.25,
+          "unit": "J",
+          "status": "PASS",
+          "basis": "DC capacitor plus magnetic energy and conservative gate-capacitance allowance"
+        }
+      ],
+      "duration_s": 1.2163257813047916,
+      "access_permitted": true,
+      "trace_columns": [
+        "time_s",
+        "dc_bus_v",
+        "current_bound_a",
+        "stored_energy_j"
+      ],
+      "metrics": {
+        "initial_stored_energy_j": 37.57089244052448,
+        "final_stored_energy_j": 0.20711251132439226,
+        "peak_dump_power_w": 155.90038991648845,
+        "dump_energy_j": 36.429544095756206
+      },
+      "note": "Post-pulse passive-network envelope; no continuation of the nanosecond transistor solver. A failed shutdown blocks virtual fixture access."
+    },
+    {
+      "key": "upper_protection_shutdown",
+      "label": "Upper protection shutdown",
+      "status": "PASS",
+      "checks": [
+        {
+          "key": "isolation",
+          "label": "Source isolation confirmed",
+          "value": true,
+          "limit": true,
+          "unit": "",
+          "status": "PASS",
+          "basis": "Physical contact feedback is represented as an explicit station input"
+        },
+        {
+          "key": "bus_safe",
+          "label": "Residual DC-link voltage",
+          "value": 29.682542660669636,
+          "limit": 30,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Prototype access threshold; not a universal safe-touch declaration"
+        },
+        {
+          "key": "current_safe",
+          "label": "Residual current upper bound",
+          "value": 2.4784518441670796e-143,
+          "limit": 0.1,
+          "unit": "A",
+          "status": "PASS",
+          "basis": "Passive RL envelope includes signed companion-path energy"
+        },
+        {
+          "key": "energy_safe",
+          "label": "Residual stored energy",
+          "value": 0.20710457052799164,
+          "limit": 0.25,
+          "unit": "J",
+          "status": "PASS",
+          "basis": "DC capacitor plus magnetic energy and conservative gate-capacitance allowance"
+        }
+      ],
+      "duration_s": 1.2214059739982115,
+      "access_permitted": true,
+      "trace_columns": [
+        "time_s",
+        "dc_bus_v",
+        "current_bound_a",
+        "stored_energy_j"
+      ],
+      "metrics": {
+        "initial_stored_energy_j": 37.43831796889047,
+        "final_stored_energy_j": 0.20710457052799164,
+        "peak_dump_power_w": 159.30731227057612,
+        "dump_energy_j": 37.2301708489668
+      },
+      "note": "Post-pulse passive-network envelope; no continuation of the nanosecond transistor solver. A failed shutdown blocks virtual fixture access."
+    }
+  ],
+  "waveforms": [
+    {
+      "run_id": "4ed7663e-1923-41c0-b644-1ab816187a78",
+      "created_utc": "2026-10-17T22:48:00.409432+00:00",
+      "model_version": "2.0.0",
+      "mode": "PHYSICS_MODEL",
+      "hardware_qualified": false,
+      "verdict": "MODEL PASS",
+      "parameters": {
+        "bus_v": 400.0,
+        "load_uh": 500.0,
+        "load_r": 0.1,
+        "pulse_us": 75.0,
+        "gap_us": 8.0,
+        "second_us": 3.0,
+        "gate_on": 14.93612802471824,
+        "gate_off": -14.93612802471824,
+        "gate_r": 4.7,
+        "stray_nh": 50.0,
+        "ron_factor": 1.0,
+        "ce_mohm": 100.0,
+        "ins_mohm": 100.0,
+        "ins_v": 500.0,
+        "desat_v": 9.0,
+        "blank_us": 2.0,
+        "trip_us": 1.0,
+        "dc_cap_uf": 470.0,
+        "gate_mohm": 100.0,
+        "temperature_c": 25.0,
+        "thermal_c_j_k": 0.1,
+        "thermal_r_k_w": 0.6,
+        "diode_vf_v": 0.7,
+        "diode_r_factor": 1.0,
+        "diode_reverse_mohm": 1000.0
+      },
+      "metrics": {
+        "peak_vce_v": 547.8619530343922,
+        "peak_ic_a": 65.31789745511792,
+        "peak_diode_a": 61.31969648990194,
+        "peak_gate_v": 14.936150575924243,
+        "min_gate_v": -14.936140604227269,
+        "max_didt_a_us": 1450.7968429573793,
+        "off_current_ma": 0.004000030287286758,
+        "first_pulse_current_a": 59.02361399011772,
+        "expected_rl_current_a": 59.247036349612124,
+        "tracking_error_pct": 0.3771030135178561,
+        "on_vce_v": 1.6467575212608065,
+        "insulation_leakage_ma": 0.005,
+        "device_energy_mj": 8.450169138851109,
+        "turn_on_window_mj": 1.0038390521797433,
+        "turn_off_window_mj": 2.1578309137275697,
+        "trip_detect_us": null,
+        "trip_off_us": null,
+        "protection_response_us": null,
+        "fault_to_off_us": null,
+        "fault_insert_us": null,
+        "final_bus_v": 394.84223421068884,
+        "final_load_a": 61.12748708112757,
+        "final_fault_a": 0.0,
+        "final_diode_a": 61.127483354077164,
+        "initial_temperature_c": 25.0,
+        "peak_temperature_c": 25.084478820373473,
+        "final_temperature_c": 25.084464151842692,
+        "bus_droop_pct": 1.289441447327789
+      },
+      "checks": [
+        {
+          "key": "vce",
+          "label": "Collector voltage ceiling",
+          "value": 547.8619530343922,
+          "limit": 1200,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Public surrogate absolute rating; not a complete SOA assessment"
+        },
+        {
+          "key": "gate_abs",
+          "label": "Absolute gate voltage",
+          "value": 14.936150575924243,
+          "limit": 20,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Public surrogate absolute rating"
+        },
+        {
+          "key": "slew",
+          "label": "Current slew over 10 ns",
+          "value": 1450.7968429573793,
+          "limit": 5000,
+          "unit": "A/\u00b5s",
+          "status": "PASS",
+          "basis": "Project brief maximum; 10 ns measurement aperture is assumed, not specified in the brief"
+        },
+        {
+          "key": "temperature",
+          "label": "Estimated peak junction temperature",
+          "value": 25.084478820373473,
+          "limit": 150,
+          "unit": "\u00b0C",
+          "status": "PASS",
+          "basis": "Surrogate maximum; illustrative lumped thermal model, not validated SOA"
+        },
+        {
+          "key": "ic",
+          "label": "Collector current ceiling",
+          "value": 65.31789745511792,
+          "limit": 201,
+          "unit": "A",
+          "status": "PASS",
+          "basis": "Public surrogate pulsed-current ceiling; pulse and thermal SOA not qualified"
+        },
+        {
+          "key": "diode",
+          "label": "Freewheel current ceiling",
+          "value": 61.31969648990194,
+          "limit": 84,
+          "unit": "A",
+          "status": "PASS",
+          "basis": "Public surrogate diode repetitive peak ceiling; thermal conditions not qualified"
+        },
+        {
+          "key": "gate_on",
+          "label": "Settled ON gate voltage",
+          "value": 14.936150327549377,
+          "limit": "14\u201316",
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Project target +15 V; \u00b11 V tolerance is an engineering assumption"
+        },
+        {
+          "key": "current_build",
+          "label": "First-pulse current tracking",
+          "value": 0.3771030135178561,
+          "limit": 10,
+          "unit": "%",
+          "status": "PASS",
+          "basis": "Engineering check against series-RL current, assumed constant 2.05 V device drop"
+        },
+        {
+          "key": "desat",
+          "label": "Uncommanded protection trip",
+          "value": 0,
+          "limit": 0,
+          "unit": "trips",
+          "status": "PASS",
+          "basis": "A normal double pulse must complete without desaturation shutdown"
+        },
+        {
+          "key": "final_off_gate",
+          "label": "OFF gate after final pulse",
+          "value": -14.936128332537944,
+          "limit": "\u221216 to \u221214",
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Calculated final transition, not the initialized OFF state"
+        },
+        {
+          "key": "turn_on_window_mj",
+          "label": "Second turn-on energy in 2 \u00b5s",
+          "value": 1.0038390521797433,
+          "limit": 1.9749012116537374,
+          "unit": "mJ",
+          "status": "PASS",
+          "basis": "Prototype energy budget scaled by requested V \u00d7 ideal-RL current and assumed temperature factor; not datasheet Eon/Eoff"
+        },
+        {
+          "key": "turn_off_window_mj",
+          "label": "First turn-off energy in 2 \u00b5s",
+          "value": 2.1578309137275697,
+          "limit": 3.949802423307475,
+          "unit": "mJ",
+          "status": "PASS",
+          "basis": "Prototype energy budget scaled by requested V \u00d7 ideal-RL current and assumed temperature factor; not datasheet Eon/Eoff"
+        },
+        {
+          "key": "profile_envelope",
+          "label": "Requested current / bus in comparison envelope",
+          "value": "59.247 A / 400.000 V",
+          "limit": "20\u201380 A / 100\u2013600 V",
+          "unit": "",
+          "status": "PASS",
+          "basis": "Outside this provisional comparison envelope, no complete model acceptance is issued"
+        }
+      ],
+      "scope": "Reduced-order circuit with finite DC link and illustrative thermal model; uncalibrated surrogate",
+      "experiment": "switching",
+      "aborted": false,
+      "freewheel_parameters": {
+        "diode_vf_v": 0.7,
+        "diode_r_factor": 1.0,
+        "diode_reverse_mohm": 1000.0
+      },
+      "sources": [
+        {
+          "title": "NU IEEE 2026 IGBT test cell_AK_Final, slides 5\u20136, 8\u201311",
+          "kind": "User project brief",
+          "url": null
+        },
+        {
+          "title": "onsemi NXH80T120L2Q0S2G, Rev. 6; half-bridge IGBT, tables 1 and 3",
+          "kind": "Public surrogate device; not the locomotive module",
+          "url": "https://www.onsemi.com/download/data-sheet/pdf/nxh80t120l2q0s2g-d.pdf"
+        },
+        {
+          "title": "Tektronix: Double Pulse Testing for Power Semiconductor Devices",
+          "kind": "Test topology and measured quantities",
+          "url": "https://www.tek.com/en/documents/application-note/double-pulse-test-tektronix-afg31000-arbitrary-function-generator"
+        }
+      ],
+      "events": [
+        {
+          "time_us": 0.0,
+          "label": "Initial OFF"
+        },
+        {
+          "time_us": 2.2,
+          "label": "Pulse 1 ON"
+        },
+        {
+          "time_us": 77.19999999999999,
+          "label": "Freewheel interval"
+        },
+        {
+          "time_us": 85.2,
+          "label": "Pulse 2 ON"
+        },
+        {
+          "time_us": 88.19999999999999,
+          "label": "Final OFF"
+        },
+        {
+          "time_us": 100.2,
+          "label": "End"
+        }
+      ],
+      "solver": {
+        "method": "Backward Euler, scalar Newton KCL",
+        "edge_step_ns": 0.5,
+        "quiet_step_ns": 20.0,
+        "steps": 20614,
+        "max_newton_iterations": 5,
+        "max_kcl_residual_a": 9.979803643438799e-09,
+        "energy_balance_residual_j": 6.993426768676231e-11,
+        "numerical_dissipation_j": 0.00024362199737697112,
+        "source_energy_j": 4.268311668072096e-05,
+        "stored_energy_change_j": -0.029172915446530112,
+        "device_loss_j": 0.00845016913885111,
+        "gate_resistor_loss_j": 3.9204121090459e-05,
+        "load_resistor_loss_j": 0.017143454804532974,
+        "diode_loss_j": 0.003339135908833082,
+        "diode_shunt_loss_j": 1.2301227493821593e-08,
+        "gate_insulation_loss_j": 2.2136447693490956e-10,
+        "fault_path_loss_j": 0.0
+      },
+      "trace_columns": [
+        "time_us",
+        "vge_v",
+        "vce_v",
+        "ic_a",
+        "il_a",
+        "diode_a",
+        "device_power_w",
+        "drive_v",
+        "fault_latched",
+        "dc_bus_v",
+        "companion_path_a",
+        "junction_estimate_c"
+      ],
+      "limitations": [
+        "Not calibrated to the locomotive module.",
+        "Constant capacitances and approximate carrier response; diode reverse recovery omitted.",
+        "Illustrative lumped thermal network; no thermal runaway, avalanche, physical damage or EMI model.",
+        "Upper and lower tests use mirrored terminal references; no simultaneous PWM leg or OEM optical protocol.",
+        "Full SOA and exact assembly interfaces remain unverified.",
+        "MODEL PASS covers only the listed checks, not hardware release."
+      ],
+      "position": "lower",
+      "test_key": "lower_switching"
+    },
+    {
+      "run_id": "6aaaf2e2-1605-436c-965b-113b892ea2bd",
+      "created_utc": "2026-10-17T22:48:00.743752+00:00",
+      "model_version": "2.0.0",
+      "mode": "PHYSICS_MODEL",
+      "hardware_qualified": false,
+      "verdict": "MODEL PASS",
+      "parameters": {
+        "bus_v": 400.0,
+        "load_uh": 500.0,
+        "load_r": 0.1,
+        "pulse_us": 75.0,
+        "gap_us": 8.0,
+        "second_us": 3.0,
+        "gate_on": 14.93612802471824,
+        "gate_off": -14.93612802471824,
+        "gate_r": 4.7,
+        "stray_nh": 50.0,
+        "ron_factor": 1.0,
+        "ce_mohm": 100.0,
+        "ins_mohm": 100.0,
+        "ins_v": 500.0,
+        "desat_v": 9.0,
+        "blank_us": 2.0,
+        "trip_us": 1.0,
+        "dc_cap_uf": 470.0,
+        "gate_mohm": 100.0,
+        "temperature_c": 25.0,
+        "thermal_c_j_k": 0.1,
+        "thermal_r_k_w": 0.6,
+        "diode_vf_v": 0.7,
+        "diode_r_factor": 1.0,
+        "diode_reverse_mohm": 1000.0
+      },
+      "metrics": {
+        "peak_vce_v": 507.5743922960515,
+        "peak_ic_a": 277.14347263073705,
+        "peak_diode_a": 260.1840330824189,
+        "peak_gate_v": 16.543073663930443,
+        "min_gate_v": -14.944347361109578,
+        "max_didt_a_us": 1861.5454001871456,
+        "off_current_ma": 0.004000030287286758,
+        "first_pulse_current_a": 2.075964699475781,
+        "expected_rl_current_a": 59.247036349612124,
+        "tracking_error_pct": 96.49608684690037,
+        "on_vce_v": 400.06316973136717,
+        "insulation_leakage_ma": 0.005,
+        "device_energy_mj": 85.09255218829652,
+        "turn_on_window_mj": 3.229808410291471e-06,
+        "turn_off_window_mj": 3.2006967402526625e-06,
+        "trip_detect_us": 5.30550000000018,
+        "trip_off_us": 6.30550000000018,
+        "protection_response_us": 1.259500000000129,
+        "fault_to_off_us": 2.3650000000003084,
+        "fault_insert_us": 4.2,
+        "final_bus_v": 399.1332011629402,
+        "final_load_a": 2.038034178899635,
+        "final_fault_a": -2.0380301984974043,
+        "final_diode_a": 0.0,
+        "initial_temperature_c": 25.0,
+        "peak_temperature_c": 25.85090219159566,
+        "final_temperature_c": 25.849590646483396,
+        "bus_droop_pct": 0.2166997092649439,
+        "returned_fault_status_us": 5.50550000000018
+      },
+      "checks": [
+        {
+          "key": "vce",
+          "label": "Collector voltage ceiling",
+          "value": 507.5743922960515,
+          "limit": 1200,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Public surrogate absolute rating; not a complete SOA assessment"
+        },
+        {
+          "key": "gate_abs",
+          "label": "Absolute gate voltage",
+          "value": 16.543073663930443,
+          "limit": 20,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Public surrogate absolute rating"
+        },
+        {
+          "key": "slew",
+          "label": "Current slew over 10 ns",
+          "value": 1861.5454001871456,
+          "limit": 5000,
+          "unit": "A/\u00b5s",
+          "status": "PASS",
+          "basis": "Project brief maximum; 10 ns measurement aperture is assumed, not specified in the brief"
+        },
+        {
+          "key": "temperature",
+          "label": "Estimated peak junction temperature",
+          "value": 25.85090219159566,
+          "limit": 150,
+          "unit": "\u00b0C",
+          "status": "PASS",
+          "basis": "Surrogate maximum; illustrative lumped thermal model, not validated SOA"
+        },
+        {
+          "key": "fault_stimulus",
+          "label": "Fault detected after short insertion",
+          "value": 5.30550000000018,
+          "limit": 4.2,
+          "unit": "\u00b5s",
+          "status": "PASS",
+          "basis": "A trip before the applied fault does not demonstrate the required protection response"
+        },
+        {
+          "key": "detection_response",
+          "label": "Detection to current below 10%",
+          "value": 1.259500000000129,
+          "limit": 10,
+          "unit": "\u00b5s",
+          "status": "PASS",
+          "basis": "Project ~10 \u00b5s requirement; 10% of detection current endpoint is explicitly assumed"
+        },
+        {
+          "key": "fault_response",
+          "label": "Fault insertion to current below 10%",
+          "value": 2.3650000000003084,
+          "limit": 5,
+          "unit": "\u00b5s",
+          "status": "PASS",
+          "basis": "Additional 5 \u00b5s prototype deadline; conditional surrogate rating does not prove survival"
+        },
+        {
+          "key": "fault_voltage_scope",
+          "label": "Fault bus within prototype envelope",
+          "value": 400.0,
+          "limit": 600,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Surrogate short-circuit rating is conditional at 600 V/+15 V and \u2264150 \u00b0C; this is only a boundary screen"
+        }
+      ],
+      "scope": "Reduced-order circuit with finite DC link and illustrative thermal model; uncalibrated surrogate",
+      "experiment": "protection",
+      "aborted": false,
+      "freewheel_parameters": {
+        "diode_vf_v": 0.7,
+        "diode_r_factor": 1.0,
+        "diode_reverse_mohm": 1000.0
+      },
+      "sources": [
+        {
+          "title": "NU IEEE 2026 IGBT test cell_AK_Final, slides 5\u20136, 8\u201311",
+          "kind": "User project brief",
+          "url": null
+        },
+        {
+          "title": "onsemi NXH80T120L2Q0S2G, Rev. 6; half-bridge IGBT, tables 1 and 3",
+          "kind": "Public surrogate device; not the locomotive module",
+          "url": "https://www.onsemi.com/download/data-sheet/pdf/nxh80t120l2q0s2g-d.pdf"
+        },
+        {
+          "title": "Tektronix: Double Pulse Testing for Power Semiconductor Devices",
+          "kind": "Test topology and measured quantities",
+          "url": "https://www.tek.com/en/documents/application-note/double-pulse-test-tektronix-afg31000-arbitrary-function-generator"
+        }
+      ],
+      "events": [
+        {
+          "time_us": 0.0,
+          "label": "Initial OFF"
+        },
+        {
+          "time_us": 2.2,
+          "label": "Pulse 1 ON"
+        },
+        {
+          "time_us": 4.2,
+          "label": "Companion RL short applied"
+        },
+        {
+          "time_us": 5.30550000000018,
+          "label": "Desaturation detected"
+        },
+        {
+          "time_us": 6.30550000000018,
+          "label": "Protection OFF command"
+        },
+        {
+          "time_us": 77.19999999999999,
+          "label": "Freewheel interval"
+        },
+        {
+          "time_us": 85.2,
+          "label": "Pulse 2 ON"
+        },
+        {
+          "time_us": 88.19999999999999,
+          "label": "Final OFF"
+        },
+        {
+          "time_us": 100.2,
+          "label": "End"
+        }
+      ],
+      "solver": {
+        "method": "Backward Euler, scalar Newton KCL",
+        "edge_step_ns": 0.5,
+        "quiet_step_ns": 20.0,
+        "steps": 28415,
+        "max_newton_iterations": 4,
+        "max_kcl_residual_a": 9.934396871210492e-09,
+        "energy_balance_residual_j": 1.3869773602873505e-10,
+        "numerical_dissipation_j": 5.692332582633635e-05,
+        "source_energy_j": 1.7288048595451276e-05,
+        "stored_energy_change_j": -0.16173919337082765,
+        "device_loss_j": 0.08509255218829652,
+        "gate_resistor_loss_j": 1.929564978855181e-05,
+        "load_resistor_loss_j": 4.665715524344577e-05,
+        "diode_loss_j": 0.03255614293626015,
+        "diode_shunt_loss_j": 5.098954231774287e-10,
+        "gate_insulation_loss_j": 2.2281591518373363e-10,
+        "fault_path_loss_j": 0.04398490929259902
+      },
+      "trace_columns": [
+        "time_us",
+        "vge_v",
+        "vce_v",
+        "ic_a",
+        "il_a",
+        "diode_a",
+        "device_power_w",
+        "drive_v",
+        "fault_latched",
+        "dc_bus_v",
+        "companion_path_a",
+        "junction_estimate_c"
+      ],
+      "limitations": [
+        "Not calibrated to the locomotive module.",
+        "Constant capacitances and approximate carrier response; diode reverse recovery omitted.",
+        "Illustrative lumped thermal network; no thermal runaway, avalanche, physical damage or EMI model.",
+        "Upper and lower tests use mirrored terminal references; no simultaneous PWM leg or OEM optical protocol.",
+        "Full SOA and exact assembly interfaces remain unverified.",
+        "MODEL PASS covers only the listed checks, not hardware release."
+      ],
+      "position": "lower",
+      "test_key": "lower_protection"
+    },
+    {
+      "run_id": "0e3ef472-b285-4662-8765-8f35829057cf",
+      "created_utc": "2026-10-17T22:48:00.986114+00:00",
+      "model_version": "2.0.0",
+      "mode": "PHYSICS_MODEL",
+      "hardware_qualified": false,
+      "verdict": "MODEL PASS",
+      "parameters": {
+        "bus_v": 400.0,
+        "load_uh": 500.0,
+        "load_r": 0.1,
+        "pulse_us": 75.0,
+        "gap_us": 8.0,
+        "second_us": 3.0,
+        "gate_on": 14.93612802471824,
+        "gate_off": -14.93612802471824,
+        "gate_r": 4.7,
+        "stray_nh": 50.0,
+        "ron_factor": 1.0,
+        "ce_mohm": 100.0,
+        "ins_mohm": 100.0,
+        "ins_v": 500.0,
+        "desat_v": 9.0,
+        "blank_us": 2.0,
+        "trip_us": 1.0,
+        "dc_cap_uf": 470.0,
+        "gate_mohm": 100.0,
+        "temperature_c": 25.0,
+        "thermal_c_j_k": 0.1,
+        "thermal_r_k_w": 0.6,
+        "diode_vf_v": 0.7,
+        "diode_r_factor": 1.0,
+        "diode_reverse_mohm": 1000.0
+      },
+      "metrics": {
+        "peak_vce_v": 547.8619530343922,
+        "peak_ic_a": 65.31789745511792,
+        "peak_diode_a": 61.31969648990194,
+        "peak_gate_v": 14.936150575924243,
+        "min_gate_v": -14.936140604227269,
+        "max_didt_a_us": 1450.7968429573793,
+        "off_current_ma": 0.004000030287286758,
+        "first_pulse_current_a": 59.02361399011772,
+        "expected_rl_current_a": 59.247036349612124,
+        "tracking_error_pct": 0.3771030135178561,
+        "on_vce_v": 1.6467575212608065,
+        "insulation_leakage_ma": 0.005,
+        "device_energy_mj": 8.450169138851109,
+        "turn_on_window_mj": 1.0038390521797433,
+        "turn_off_window_mj": 2.1578309137275697,
+        "trip_detect_us": null,
+        "trip_off_us": null,
+        "protection_response_us": null,
+        "fault_to_off_us": null,
+        "fault_insert_us": null,
+        "final_bus_v": 394.84223421068884,
+        "final_load_a": 61.12748708112757,
+        "final_fault_a": 0.0,
+        "final_diode_a": 61.127483354077164,
+        "initial_temperature_c": 25.0,
+        "peak_temperature_c": 25.084478820373473,
+        "final_temperature_c": 25.084464151842692,
+        "bus_droop_pct": 1.289441447327789
+      },
+      "checks": [
+        {
+          "key": "vce",
+          "label": "Collector voltage ceiling",
+          "value": 547.8619530343922,
+          "limit": 1200,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Public surrogate absolute rating; not a complete SOA assessment"
+        },
+        {
+          "key": "gate_abs",
+          "label": "Absolute gate voltage",
+          "value": 14.936150575924243,
+          "limit": 20,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Public surrogate absolute rating"
+        },
+        {
+          "key": "slew",
+          "label": "Current slew over 10 ns",
+          "value": 1450.7968429573793,
+          "limit": 5000,
+          "unit": "A/\u00b5s",
+          "status": "PASS",
+          "basis": "Project brief maximum; 10 ns measurement aperture is assumed, not specified in the brief"
+        },
+        {
+          "key": "temperature",
+          "label": "Estimated peak junction temperature",
+          "value": 25.084478820373473,
+          "limit": 150,
+          "unit": "\u00b0C",
+          "status": "PASS",
+          "basis": "Surrogate maximum; illustrative lumped thermal model, not validated SOA"
+        },
+        {
+          "key": "ic",
+          "label": "Collector current ceiling",
+          "value": 65.31789745511792,
+          "limit": 201,
+          "unit": "A",
+          "status": "PASS",
+          "basis": "Public surrogate pulsed-current ceiling; pulse and thermal SOA not qualified"
+        },
+        {
+          "key": "diode",
+          "label": "Freewheel current ceiling",
+          "value": 61.31969648990194,
+          "limit": 84,
+          "unit": "A",
+          "status": "PASS",
+          "basis": "Public surrogate diode repetitive peak ceiling; thermal conditions not qualified"
+        },
+        {
+          "key": "gate_on",
+          "label": "Settled ON gate voltage",
+          "value": 14.936150327549377,
+          "limit": "14\u201316",
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Project target +15 V; \u00b11 V tolerance is an engineering assumption"
+        },
+        {
+          "key": "current_build",
+          "label": "First-pulse current tracking",
+          "value": 0.3771030135178561,
+          "limit": 10,
+          "unit": "%",
+          "status": "PASS",
+          "basis": "Engineering check against series-RL current, assumed constant 2.05 V device drop"
+        },
+        {
+          "key": "desat",
+          "label": "Uncommanded protection trip",
+          "value": 0,
+          "limit": 0,
+          "unit": "trips",
+          "status": "PASS",
+          "basis": "A normal double pulse must complete without desaturation shutdown"
+        },
+        {
+          "key": "final_off_gate",
+          "label": "OFF gate after final pulse",
+          "value": -14.936128332537944,
+          "limit": "\u221216 to \u221214",
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Calculated final transition, not the initialized OFF state"
+        },
+        {
+          "key": "turn_on_window_mj",
+          "label": "Second turn-on energy in 2 \u00b5s",
+          "value": 1.0038390521797433,
+          "limit": 1.9749012116537374,
+          "unit": "mJ",
+          "status": "PASS",
+          "basis": "Prototype energy budget scaled by requested V \u00d7 ideal-RL current and assumed temperature factor; not datasheet Eon/Eoff"
+        },
+        {
+          "key": "turn_off_window_mj",
+          "label": "First turn-off energy in 2 \u00b5s",
+          "value": 2.1578309137275697,
+          "limit": 3.949802423307475,
+          "unit": "mJ",
+          "status": "PASS",
+          "basis": "Prototype energy budget scaled by requested V \u00d7 ideal-RL current and assumed temperature factor; not datasheet Eon/Eoff"
+        },
+        {
+          "key": "profile_envelope",
+          "label": "Requested current / bus in comparison envelope",
+          "value": "59.247 A / 400.000 V",
+          "limit": "20\u201380 A / 100\u2013600 V",
+          "unit": "",
+          "status": "PASS",
+          "basis": "Outside this provisional comparison envelope, no complete model acceptance is issued"
+        }
+      ],
+      "scope": "Reduced-order circuit with finite DC link and illustrative thermal model; uncalibrated surrogate",
+      "experiment": "switching",
+      "aborted": false,
+      "freewheel_parameters": {
+        "diode_vf_v": 0.7,
+        "diode_r_factor": 1.0,
+        "diode_reverse_mohm": 1000.0
+      },
+      "sources": [
+        {
+          "title": "NU IEEE 2026 IGBT test cell_AK_Final, slides 5\u20136, 8\u201311",
+          "kind": "User project brief",
+          "url": null
+        },
+        {
+          "title": "onsemi NXH80T120L2Q0S2G, Rev. 6; half-bridge IGBT, tables 1 and 3",
+          "kind": "Public surrogate device; not the locomotive module",
+          "url": "https://www.onsemi.com/download/data-sheet/pdf/nxh80t120l2q0s2g-d.pdf"
+        },
+        {
+          "title": "Tektronix: Double Pulse Testing for Power Semiconductor Devices",
+          "kind": "Test topology and measured quantities",
+          "url": "https://www.tek.com/en/documents/application-note/double-pulse-test-tektronix-afg31000-arbitrary-function-generator"
+        }
+      ],
+      "events": [
+        {
+          "time_us": 0.0,
+          "label": "Initial OFF"
+        },
+        {
+          "time_us": 2.2,
+          "label": "Pulse 1 ON"
+        },
+        {
+          "time_us": 77.19999999999999,
+          "label": "Freewheel interval"
+        },
+        {
+          "time_us": 85.2,
+          "label": "Pulse 2 ON"
+        },
+        {
+          "time_us": 88.19999999999999,
+          "label": "Final OFF"
+        },
+        {
+          "time_us": 100.2,
+          "label": "End"
+        }
+      ],
+      "solver": {
+        "method": "Backward Euler, scalar Newton KCL",
+        "edge_step_ns": 0.5,
+        "quiet_step_ns": 20.0,
+        "steps": 20614,
+        "max_newton_iterations": 5,
+        "max_kcl_residual_a": 9.979803643438799e-09,
+        "energy_balance_residual_j": 6.993426768676231e-11,
+        "numerical_dissipation_j": 0.00024362199737697112,
+        "source_energy_j": 4.268311668072096e-05,
+        "stored_energy_change_j": -0.029172915446530112,
+        "device_loss_j": 0.00845016913885111,
+        "gate_resistor_loss_j": 3.9204121090459e-05,
+        "load_resistor_loss_j": 0.017143454804532974,
+        "diode_loss_j": 0.003339135908833082,
+        "diode_shunt_loss_j": 1.2301227493821593e-08,
+        "gate_insulation_loss_j": 2.2136447693490956e-10,
+        "fault_path_loss_j": 0.0
+      },
+      "trace_columns": [
+        "time_us",
+        "vge_v",
+        "vce_v",
+        "ic_a",
+        "il_a",
+        "diode_a",
+        "device_power_w",
+        "drive_v",
+        "fault_latched",
+        "dc_bus_v",
+        "companion_path_a",
+        "junction_estimate_c"
+      ],
+      "limitations": [
+        "Not calibrated to the locomotive module.",
+        "Constant capacitances and approximate carrier response; diode reverse recovery omitted.",
+        "Illustrative lumped thermal network; no thermal runaway, avalanche, physical damage or EMI model.",
+        "Upper and lower tests use mirrored terminal references; no simultaneous PWM leg or OEM optical protocol.",
+        "Full SOA and exact assembly interfaces remain unverified.",
+        "MODEL PASS covers only the listed checks, not hardware release."
+      ],
+      "position": "upper",
+      "test_key": "upper_switching"
+    },
+    {
+      "run_id": "86d6c862-143d-4c3c-9074-ff6a10f675ea",
+      "created_utc": "2026-10-17T22:48:01.343294+00:00",
+      "model_version": "2.0.0",
+      "mode": "PHYSICS_MODEL",
+      "hardware_qualified": false,
+      "verdict": "MODEL PASS",
+      "parameters": {
+        "bus_v": 400.0,
+        "load_uh": 500.0,
+        "load_r": 0.1,
+        "pulse_us": 75.0,
+        "gap_us": 8.0,
+        "second_us": 3.0,
+        "gate_on": 14.93612802471824,
+        "gate_off": -14.93612802471824,
+        "gate_r": 4.7,
+        "stray_nh": 50.0,
+        "ron_factor": 1.0,
+        "ce_mohm": 100.0,
+        "ins_mohm": 100.0,
+        "ins_v": 500.0,
+        "desat_v": 9.0,
+        "blank_us": 2.0,
+        "trip_us": 1.0,
+        "dc_cap_uf": 470.0,
+        "gate_mohm": 100.0,
+        "temperature_c": 25.0,
+        "thermal_c_j_k": 0.1,
+        "thermal_r_k_w": 0.6,
+        "diode_vf_v": 0.7,
+        "diode_r_factor": 1.0,
+        "diode_reverse_mohm": 1000.0
+      },
+      "metrics": {
+        "peak_vce_v": 507.5743922960515,
+        "peak_ic_a": 277.14347263073705,
+        "peak_diode_a": 260.1840330824189,
+        "peak_gate_v": 16.543073663930443,
+        "min_gate_v": -14.944347361109578,
+        "max_didt_a_us": 1861.5454001871456,
+        "off_current_ma": 0.004000030287286758,
+        "first_pulse_current_a": 2.075964699475781,
+        "expected_rl_current_a": 59.247036349612124,
+        "tracking_error_pct": 96.49608684690037,
+        "on_vce_v": 400.06316973136717,
+        "insulation_leakage_ma": 0.005,
+        "device_energy_mj": 85.09255218829652,
+        "turn_on_window_mj": 3.229808410291471e-06,
+        "turn_off_window_mj": 3.2006967402526625e-06,
+        "trip_detect_us": 5.30550000000018,
+        "trip_off_us": 6.30550000000018,
+        "protection_response_us": 1.259500000000129,
+        "fault_to_off_us": 2.3650000000003084,
+        "fault_insert_us": 4.2,
+        "final_bus_v": 399.1332011629402,
+        "final_load_a": 2.038034178899635,
+        "final_fault_a": -2.0380301984974043,
+        "final_diode_a": 0.0,
+        "initial_temperature_c": 25.0,
+        "peak_temperature_c": 25.85090219159566,
+        "final_temperature_c": 25.849590646483396,
+        "bus_droop_pct": 0.2166997092649439,
+        "returned_fault_status_us": 5.50550000000018
+      },
+      "checks": [
+        {
+          "key": "vce",
+          "label": "Collector voltage ceiling",
+          "value": 507.5743922960515,
+          "limit": 1200,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Public surrogate absolute rating; not a complete SOA assessment"
+        },
+        {
+          "key": "gate_abs",
+          "label": "Absolute gate voltage",
+          "value": 16.543073663930443,
+          "limit": 20,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Public surrogate absolute rating"
+        },
+        {
+          "key": "slew",
+          "label": "Current slew over 10 ns",
+          "value": 1861.5454001871456,
+          "limit": 5000,
+          "unit": "A/\u00b5s",
+          "status": "PASS",
+          "basis": "Project brief maximum; 10 ns measurement aperture is assumed, not specified in the brief"
+        },
+        {
+          "key": "temperature",
+          "label": "Estimated peak junction temperature",
+          "value": 25.85090219159566,
+          "limit": 150,
+          "unit": "\u00b0C",
+          "status": "PASS",
+          "basis": "Surrogate maximum; illustrative lumped thermal model, not validated SOA"
+        },
+        {
+          "key": "fault_stimulus",
+          "label": "Fault detected after short insertion",
+          "value": 5.30550000000018,
+          "limit": 4.2,
+          "unit": "\u00b5s",
+          "status": "PASS",
+          "basis": "A trip before the applied fault does not demonstrate the required protection response"
+        },
+        {
+          "key": "detection_response",
+          "label": "Detection to current below 10%",
+          "value": 1.259500000000129,
+          "limit": 10,
+          "unit": "\u00b5s",
+          "status": "PASS",
+          "basis": "Project ~10 \u00b5s requirement; 10% of detection current endpoint is explicitly assumed"
+        },
+        {
+          "key": "fault_response",
+          "label": "Fault insertion to current below 10%",
+          "value": 2.3650000000003084,
+          "limit": 5,
+          "unit": "\u00b5s",
+          "status": "PASS",
+          "basis": "Additional 5 \u00b5s prototype deadline; conditional surrogate rating does not prove survival"
+        },
+        {
+          "key": "fault_voltage_scope",
+          "label": "Fault bus within prototype envelope",
+          "value": 400.0,
+          "limit": 600,
+          "unit": "V",
+          "status": "PASS",
+          "basis": "Surrogate short-circuit rating is conditional at 600 V/+15 V and \u2264150 \u00b0C; this is only a boundary screen"
+        }
+      ],
+      "scope": "Reduced-order circuit with finite DC link and illustrative thermal model; uncalibrated surrogate",
+      "experiment": "protection",
+      "aborted": false,
+      "freewheel_parameters": {
+        "diode_vf_v": 0.7,
+        "diode_r_factor": 1.0,
+        "diode_reverse_mohm": 1000.0
+      },
+      "sources": [
+        {
+          "title": "NU IEEE 2026 IGBT test cell_AK_Final, slides 5\u20136, 8\u201311",
+          "kind": "User project brief",
+          "url": null
+        },
+        {
+          "title": "onsemi NXH80T120L2Q0S2G, Rev. 6; half-bridge IGBT, tables 1 and 3",
+          "kind": "Public surrogate device; not the locomotive module",
+          "url": "https://www.onsemi.com/download/data-sheet/pdf/nxh80t120l2q0s2g-d.pdf"
+        },
+        {
+          "title": "Tektronix: Double Pulse Testing for Power Semiconductor Devices",
+          "kind": "Test topology and measured quantities",
+          "url": "https://www.tek.com/en/documents/application-note/double-pulse-test-tektronix-afg31000-arbitrary-function-generator"
+        }
+      ],
+      "events": [
+        {
+          "time_us": 0.0,
+          "label": "Initial OFF"
+        },
+        {
+          "time_us": 2.2,
+          "label": "Pulse 1 ON"
+        },
+        {
+          "time_us": 4.2,
+          "label": "Companion RL short applied"
+        },
+        {
+          "time_us": 5.30550000000018,
+          "label": "Desaturation detected"
+        },
+        {
+          "time_us": 6.30550000000018,
+          "label": "Protection OFF command"
+        },
+        {
+          "time_us": 77.19999999999999,
+          "label": "Freewheel interval"
+        },
+        {
+          "time_us": 85.2,
+          "label": "Pulse 2 ON"
+        },
+        {
+          "time_us": 88.19999999999999,
+          "label": "Final OFF"
+        },
+        {
+          "time_us": 100.2,
+          "label": "End"
+        }
+      ],
+      "solver": {
+        "method": "Backward Euler, scalar Newton KCL",
+        "edge_step_ns": 0.5,
+        "quiet_step_ns": 20.0,
+        "steps": 28415,
+        "max_newton_iterations": 4,
+        "max_kcl_residual_a": 9.934396871210492e-09,
+        "energy_balance_residual_j": 1.3869773602873505e-10,
+        "numerical_dissipation_j": 5.692332582633635e-05,
+        "source_energy_j": 1.7288048595451276e-05,
+        "stored_energy_change_j": -0.16173919337082765,
+        "device_loss_j": 0.08509255218829652,
+        "gate_resistor_loss_j": 1.929564978855181e-05,
+        "load_resistor_loss_j": 4.665715524344577e-05,
+        "diode_loss_j": 0.03255614293626015,
+        "diode_shunt_loss_j": 5.098954231774287e-10,
+        "gate_insulation_loss_j": 2.2281591518373363e-10,
+        "fault_path_loss_j": 0.04398490929259902
+      },
+      "trace_columns": [
+        "time_us",
+        "vge_v",
+        "vce_v",
+        "ic_a",
+        "il_a",
+        "diode_a",
+        "device_power_w",
+        "drive_v",
+        "fault_latched",
+        "dc_bus_v",
+        "companion_path_a",
+        "junction_estimate_c"
+      ],
+      "limitations": [
+        "Not calibrated to the locomotive module.",
+        "Constant capacitances and approximate carrier response; diode reverse recovery omitted.",
+        "Illustrative lumped thermal network; no thermal runaway, avalanche, physical damage or EMI model.",
+        "Upper and lower tests use mirrored terminal references; no simultaneous PWM leg or OEM optical protocol.",
+        "Full SOA and exact assembly interfaces remain unverified.",
+        "MODEL PASS covers only the listed checks, not hardware release."
+      ],
+      "position": "upper",
+      "test_key": "upper_protection"
+    }
+  ],
+  "timeline": [
+    {
+      "label": "Station interlocks",
+      "duration_s": 0.25
+    },
+    {
+      "label": "Driver supply and rail checks",
+      "duration_s": 0.25
+    },
+    {
+      "label": "Fiber command and returned-status timing",
+      "duration_s": 0.1
+    },
+    {
+      "label": "Busbar insulation and discharge",
+      "duration_s": 1.0078046066098172
+    },
+    {
+      "label": "Lower static checks",
+      "duration_s": 1.25
+    },
+    {
+      "label": "Upper static checks",
+      "duration_s": 1.25
+    },
+    {
+      "label": "Lower switching precharge and settle",
+      "duration_s": 0.611
+    },
+    {
+      "label": "Lower switching",
+      "duration_s": 0.0001002
+    },
+    {
+      "label": "Lower switching shutdown",
+      "duration_s": 1.2163257813047916
+    },
+    {
+      "label": "Lower thermal reset dwell (estimated)",
+      "duration_s": 0.03145825202233947
+    },
+    {
+      "label": "Lower protection precharge and settle",
+      "duration_s": 0.611
+    },
+    {
+      "label": "Lower protection",
+      "duration_s": 0.0001002
+    },
+    {
+      "label": "Lower protection shutdown",
+      "duration_s": 1.2214059739982115
+    },
+    {
+      "label": "Lower thermal reset dwell (estimated)",
+      "duration_s": 0.16996389814085328
+    },
+    {
+      "label": "Upper switching precharge and settle",
+      "duration_s": 0.611
+    },
+    {
+      "label": "Upper switching",
+      "duration_s": 0.0001002
+    },
+    {
+      "label": "Upper switching shutdown",
+      "duration_s": 1.2163257813047916
+    },
+    {
+      "label": "Upper thermal reset dwell (estimated)",
+      "duration_s": 0.03145825202233947
+    },
+    {
+      "label": "Upper protection precharge and settle",
+      "duration_s": 0.611
+    },
+    {
+      "label": "Upper protection",
+      "duration_s": 0.0001002
+    },
+    {
+      "label": "Upper protection shutdown",
+      "duration_s": 1.2214059739982115
+    },
+    {
+      "label": "Upper thermal reset dwell (estimated)",
+      "duration_s": 0.16996389814085328
+    }
+  ],
+  "virtual_suite_verdict": "PASS",
+  "hardware_qualification": "INCOMPLETE",
+  "hardware_qualified": false,
+  "hardware_release": false,
+  "qualification_blockers": [
+    "Exact locomotive assembly, semiconductor, driver, diode, busbar and cooling part numbers are unavailable.",
+    "OEM acceptance conditions, limits, interface pinout, optical protocol and fault semantics are unapproved.",
+    "No measured switching, leakage, thermal or fault traces have been supplied for correlation.",
+    "Nonlinear capacitance, diode reverse recovery, detailed driver electronics and full safe operating area are not validated.",
+    "Independent physical protection, insulation coordination, fixture loads and instrument uncertainty require engineering review and commissioning."
+  ],
+  "virtual_access_permitted": true,
+  "aborted": false,
+  "coverage": [
+    {
+      "key": "station",
+      "status": "PASS"
+    },
+    {
+      "key": "driver",
+      "status": "PASS"
+    },
+    {
+      "key": "fiber",
+      "status": "PASS"
+    },
+    {
+      "key": "insulation",
+      "status": "PASS"
+    },
+    {
+      "key": "lower_static",
+      "status": "PASS"
+    },
+    {
+      "key": "lower_switching",
+      "status": "PASS"
+    },
+    {
+      "key": "lower_protection",
+      "status": "PASS"
+    },
+    {
+      "key": "upper_static",
+      "status": "PASS"
+    },
+    {
+      "key": "upper_switching",
+      "status": "PASS"
+    },
+    {
+      "key": "upper_protection",
+      "status": "PASS"
+    }
+  ],
+  "counts": {
+    "PASS": 10,
+    "FAIL": 0,
+    "INCOMPLETE": 0,
+    "NOT RUN": 0,
+    "total_required": 10
+  },
+  "timing": {
+    "estimated_automated_cycle_s": 11.830513217542208,
+    "assumed_operator_handling_s": 90,
+    "assumed_report_overhead_s": 2,
+    "note": "Analytical stimulus, charging, discharge and thermal dwell estimates; not measured station throughput or computation time. Verify by commissioning time study.",
+    "estimated_total_s": 103.8305132175422
+  },
+  "completion_statement": "Virtual PASS means every required prototype check and discharge passed. Physical module qualification remains INCOMPLETE.",
+  "computation_seconds": null,
+  "saved_report": "reports/9929792f-7522-41f2-ac1f-584c71b446b2"
+}

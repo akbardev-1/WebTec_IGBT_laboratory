@@ -1,0 +1,219 @@
+{
+  "version": "2.0.0",
+  "default_full_suite": "PASS",
+  "coverage": {
+    "PASS": 10,
+    "FAIL": 0,
+    "INCOMPLETE": 0,
+    "NOT RUN": 0,
+    "total_required": 10
+  },
+  "hardware_qualification": "INCOMPLETE",
+  "virtual_access_permitted": true,
+  "timing": {
+    "estimated_automated_cycle_s": 11.830513217542208,
+    "assumed_operator_handling_s": 90,
+    "assumed_report_overhead_s": 2,
+    "note": "Analytical stimulus, charging, discharge and thermal dwell estimates; not measured station throughput or computation time. Verify by commissioning time study.",
+    "estimated_total_s": 103.8305132175422
+  },
+  "half_step_relative_difference_pct": {
+    "peak_vce_v": 1.2713735128792147,
+    "peak_ic_a": 0.3746148969365315,
+    "device_energy_mj": 0.23089854628270956,
+    "turn_on_window_mj": 0.9667138019877841,
+    "turn_off_window_mj": 0.3071455392321232
+  },
+  "metrics": {
+    "lower_switching": {
+      "peak_vce_v": 547.8619530343922,
+      "peak_ic_a": 65.31789745511792,
+      "peak_diode_a": 61.31969648990194,
+      "peak_gate_v": 14.936150575924243,
+      "min_gate_v": -14.936140604227269,
+      "max_didt_a_us": 1450.7968429573793,
+      "off_current_ma": 0.004000030287286758,
+      "first_pulse_current_a": 59.02361399011772,
+      "expected_rl_current_a": 59.247036349612124,
+      "tracking_error_pct": 0.3771030135178561,
+      "on_vce_v": 1.6467575212608065,
+      "insulation_leakage_ma": 0.005,
+      "device_energy_mj": 8.450169138851109,
+      "turn_on_window_mj": 1.0038390521797433,
+      "turn_off_window_mj": 2.1578309137275697,
+      "trip_detect_us": null,
+      "trip_off_us": null,
+      "protection_response_us": null,
+      "fault_to_off_us": null,
+      "fault_insert_us": null,
+      "final_bus_v": 394.84223421068884,
+      "final_load_a": 61.12748708112757,
+      "final_fault_a": 0.0,
+      "final_diode_a": 61.127483354077164,
+      "initial_temperature_c": 25.0,
+      "peak_temperature_c": 25.084478820373473,
+      "final_temperature_c": 25.084464151842692,
+      "bus_droop_pct": 1.289441447327789
+    },
+    "lower_protection": {
+      "peak_vce_v": 507.5743922960515,
+      "peak_ic_a": 277.14347263073705,
+      "peak_diode_a": 260.1840330824189,
+      "peak_gate_v": 16.543073663930443,
+      "min_gate_v": -14.944347361109578,
+      "max_didt_a_us": 1861.5454001871456,
+      "off_current_ma": 0.004000030287286758,
+      "first_pulse_current_a": 2.075964699475781,
+      "expected_rl_current_a": 59.247036349612124,
+      "tracking_error_pct": 96.49608684690037,
+      "on_vce_v": 400.06316973136717,
+      "insulation_leakage_ma": 0.005,
+      "device_energy_mj": 85.09255218829652,
+      "turn_on_window_mj": 3.229808410291471e-06,
+      "turn_off_window_mj": 3.2006967402526625e-06,
+      "trip_detect_us": 5.30550000000018,
+      "trip_off_us": 6.30550000000018,
+      "protection_response_us": 1.259500000000129,
+      "fault_to_off_us": 2.3650000000003084,
+      "fault_insert_us": 4.2,
+      "final_bus_v": 399.1332011629402,
+      "final_load_a": 2.038034178899635,
+      "final_fault_a": -2.0380301984974043,
+      "final_diode_a": 0.0,
+      "initial_temperature_c": 25.0,
+      "peak_temperature_c": 25.85090219159566,
+      "final_temperature_c": 25.849590646483396,
+      "bus_droop_pct": 0.2166997092649439,
+      "returned_fault_status_us": 5.50550000000018
+    },
+    "upper_switching": {
+      "peak_vce_v": 547.8619530343922,
+      "peak_ic_a": 65.31789745511792,
+      "peak_diode_a": 61.31969648990194,
+      "peak_gate_v": 14.936150575924243,
+      "min_gate_v": -14.936140604227269,
+      "max_didt_a_us": 1450.7968429573793,
+      "off_current_ma": 0.004000030287286758,
+      "first_pulse_current_a": 59.02361399011772,
+      "expected_rl_current_a": 59.247036349612124,
+      "tracking_error_pct": 0.3771030135178561,
+      "on_vce_v": 1.6467575212608065,
+      "insulation_leakage_ma": 0.005,
+      "device_energy_mj": 8.450169138851109,
+      "turn_on_window_mj": 1.0038390521797433,
+      "turn_off_window_mj": 2.1578309137275697,
+      "trip_detect_us": null,
+      "trip_off_us": null,
+      "protection_response_us": null,
+      "fault_to_off_us": null,
+      "fault_insert_us": null,
+      "final_bus_v": 394.84223421068884,
+      "final_load_a": 61.12748708112757,
+      "final_fault_a": 0.0,
+      "final_diode_a": 61.127483354077164,
+      "initial_temperature_c": 25.0,
+      "peak_temperature_c": 25.084478820373473,
+      "final_temperature_c": 25.084464151842692,
+      "bus_droop_pct": 1.289441447327789
+    },
+    "upper_protection": {
+      "peak_vce_v": 507.5743922960515,
+      "peak_ic_a": 277.14347263073705,
+      "peak_diode_a": 260.1840330824189,
+      "peak_gate_v": 16.543073663930443,
+      "min_gate_v": -14.944347361109578,
+      "max_didt_a_us": 1861.5454001871456,
+      "off_current_ma": 0.004000030287286758,
+      "first_pulse_current_a": 2.075964699475781,
+      "expected_rl_current_a": 59.247036349612124,
+      "tracking_error_pct": 96.49608684690037,
+      "on_vce_v": 400.06316973136717,
+      "insulation_leakage_ma": 0.005,
+      "device_energy_mj": 85.09255218829652,
+      "turn_on_window_mj": 3.229808410291471e-06,
+      "turn_off_window_mj": 3.2006967402526625e-06,
+      "trip_detect_us": 5.30550000000018,
+      "trip_off_us": 6.30550000000018,
+      "protection_response_us": 1.259500000000129,
+      "fault_to_off_us": 2.3650000000003084,
+      "fault_insert_us": 4.2,
+      "final_bus_v": 399.1332011629402,
+      "final_load_a": 2.038034178899635,
+      "final_fault_a": -2.0380301984974043,
+      "final_diode_a": 0.0,
+      "initial_temperature_c": 25.0,
+      "peak_temperature_c": 25.85090219159566,
+      "final_temperature_c": 25.849590646483396,
+      "bus_droop_pct": 0.2166997092649439,
+      "returned_fault_status_us": 5.50550000000018
+    }
+  },
+  "shutdowns": {
+    "lower_switching_shutdown": {
+      "duration_s": 1.2163257813047916,
+      "final_state": [
+        1.2163257813047916,
+        29.682542660669633,
+        8.140237204284522e-142,
+        0.20711251132439226
+      ],
+      "metrics": {
+        "initial_stored_energy_j": 37.57089244052448,
+        "final_stored_energy_j": 0.20711251132439226,
+        "peak_dump_power_w": 155.90038991648845,
+        "dump_energy_j": 36.429544095756206
+      }
+    },
+    "lower_protection_shutdown": {
+      "duration_s": 1.2214059739982115,
+      "final_state": [
+        1.2214059739982115,
+        29.682542660669636,
+        2.4784518441670796e-143,
+        0.20710457052799164
+      ],
+      "metrics": {
+        "initial_stored_energy_j": 37.43831796889047,
+        "final_stored_energy_j": 0.20710457052799164,
+        "peak_dump_power_w": 159.30731227057612,
+        "dump_energy_j": 37.2301708489668
+      }
+    },
+    "upper_switching_shutdown": {
+      "duration_s": 1.2163257813047916,
+      "final_state": [
+        1.2163257813047916,
+        29.682542660669633,
+        8.140237204284522e-142,
+        0.20711251132439226
+      ],
+      "metrics": {
+        "initial_stored_energy_j": 37.57089244052448,
+        "final_stored_energy_j": 0.20711251132439226,
+        "peak_dump_power_w": 155.90038991648845,
+        "dump_energy_j": 36.429544095756206
+      }
+    },
+    "upper_protection_shutdown": {
+      "duration_s": 1.2214059739982115,
+      "final_state": [
+        1.2214059739982115,
+        29.682542660669636,
+        2.4784518441670796e-143,
+        0.20710457052799164
+      ],
+      "metrics": {
+        "initial_stored_energy_j": 37.43831796889047,
+        "final_stored_energy_j": 0.20710457052799164,
+        "peak_dump_power_w": 159.30731227057612,
+        "dump_energy_j": 37.2301708489668
+      }
+    }
+  },
+  "energy_residuals_j": {
+    "lower_switching": 6.993426768676231e-11,
+    "lower_protection": 1.3869773602873505e-10,
+    "upper_switching": 6.993426768676231e-11,
+    "upper_protection": 1.3869773602873505e-10
+  }
+}

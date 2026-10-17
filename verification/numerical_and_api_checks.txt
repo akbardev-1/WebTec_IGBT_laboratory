@@ -1,0 +1,51 @@
+test_configuration_and_assets (test_http.HTTPIntegration.test_configuration_and_assets) ... [virtual lab] "GET / HTTP/1.1" 200 -
+[virtual lab] "GET /app.js HTTP/1.1" 200 -
+[virtual lab] "GET /style.css HTTP/1.1" 200 -
+[virtual lab] "GET /model.html HTTP/1.1" 200 -
+[virtual lab] "GET /api/config HTTP/1.1" 200 -
+ok
+test_foreign_origin_is_rejected (test_http.HTTPIntegration.test_foreign_origin_is_rejected) ... [virtual lab] "POST /api/run HTTP/1.1" 403 -
+ok
+test_full_run_and_complete_report_bundle (test_http.HTTPIntegration.test_full_run_and_complete_report_bundle) ... [virtual lab] "POST /api/run HTTP/1.1" 202 -
+[virtual lab] "GET /api/report/e703476e-1724-4595-8d97-cef3043a9250.zip HTTP/1.1" 200 -
+ok
+test_invalid_request_is_rejected (test_http.HTTPIntegration.test_invalid_request_is_rejected) ... [virtual lab] "POST /api/run HTTP/1.1" 400 -
+[virtual lab] "POST /api/run HTTP/1.1" 400 -
+[virtual lab] "POST /api/run HTTP/1.1" 400 -
+ok
+test_report_path_traversal_is_rejected (test_http.HTTPIntegration.test_report_path_traversal_is_rejected) ... [virtual lab] "GET /api/report/..%2fphysics.py HTTP/1.1" 404 -
+ok
+test_run_concurrency_and_stop (test_http.HTTPIntegration.test_run_concurrency_and_stop) ... [virtual lab] "POST /api/run HTTP/1.1" 202 -
+[virtual lab] "POST /api/run HTTP/1.1" 409 -
+[virtual lab] "POST /api/stop/77f9992c-df53-4511-82ad-40114c770c97 HTTP/1.1" 200 -
+ok
+test_station_block_and_unknown_routes (test_http.HTTPIntegration.test_station_block_and_unknown_routes) ... [virtual lab] "POST /api/run HTTP/1.1" 202 -
+[virtual lab] "POST /api/hardware HTTP/1.1" 404 -
+ok
+test_cancellation_inhibits_gate (test_physics.CircuitVerification.test_cancellation_inhibits_gate) ... ok
+test_companion_diode_changes_other_switch_waveform (test_physics.CircuitVerification.test_companion_diode_changes_other_switch_waveform) ... ok
+test_energy_conservation_normal_and_fault (test_physics.CircuitVerification.test_energy_conservation_normal_and_fault) ... ok
+test_fault_current_is_solved_and_latches_off (test_physics.CircuitVerification.test_fault_current_is_solved_and_latches_off) ... ok
+test_half_timestep_convergence (test_physics.CircuitVerification.test_half_timestep_convergence) ... ok
+test_inductive_ramp_and_dc_link_droop (test_physics.CircuitVerification.test_inductive_ramp_and_dc_link_droop) ... ok
+test_initial_static_calibration_point (test_physics.CircuitVerification.test_initial_static_calibration_point) ... ok
+test_invalid_numbers_cannot_become_pass (test_physics.CircuitVerification.test_invalid_numbers_cannot_become_pass) ... ok
+test_slow_protection_fails_actual_timing (test_physics.CircuitVerification.test_slow_protection_fails_actual_timing) ... ok
+test_temperature_and_power_are_coupled (test_physics.CircuitVerification.test_temperature_and_power_are_coupled) ... ok
+test_trace_is_complete_and_finite (test_physics.CircuitVerification.test_trace_is_complete_and_finite) ... ok
+test_driver_collapse_inhibits_switching (test_physics.SuiteVerification.test_driver_collapse_inhibits_switching) ... ok
+test_expected_fault_trip_can_pass_protection_test (test_physics.SuiteVerification.test_expected_fault_trip_can_pass_protection_test) ... ok
+test_full_required_coverage_and_hardware_separation (test_physics.SuiteVerification.test_full_required_coverage_and_hardware_separation) ... ok
+test_high_conduction_loss_is_detected_before_pulsing (test_physics.SuiteVerification.test_high_conduction_loss_is_detected_before_pulsing) ... ok
+test_insulation_source_compliance_and_leakage (test_physics.SuiteVerification.test_insulation_source_compliance_and_leakage) ... ok
+test_interlocks_inhibit_all_powered_tests (test_physics.SuiteVerification.test_interlocks_inhibit_all_powered_tests) ... ok
+test_invalid_energy_window_is_incomplete (test_physics.SuiteVerification.test_invalid_energy_window_is_incomplete) ... ok
+test_no_access_with_residual_energy (test_physics.SuiteVerification.test_no_access_with_residual_energy) ... ok
+test_operator_stop_preserves_shutdown (test_physics.SuiteVerification.test_operator_stop_preserves_shutdown) ... ok
+test_partial_suite_never_claims_full_pass (test_physics.SuiteVerification.test_partial_suite_never_claims_full_pass) ... ok
+test_report_has_inputs_limits_sources_and_timing (test_physics.SuiteVerification.test_report_has_inputs_limits_sources_and_timing) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 10.127s
+
+OK

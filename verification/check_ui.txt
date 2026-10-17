@@ -1,0 +1,21 @@
+{
+  "result": "PASS",
+  "checks": [
+    "real HTTP configuration and full calculation",
+    "ten mandatory groups rendered",
+    "hardware qualification remains false",
+    "waveform extrema and cursor-to-3D binding",
+    "edge zoom and six-second replay",
+    "upper protection and discharge selections",
+    "seconds versus microseconds",
+    "driver and insulation traces",
+    "camera and reveal bindings",
+    "changed inputs marked stale",
+    "insulation failure inhibits pulses",
+    "partial suite is incomplete",
+    "door state binds to interlock and 3D",
+    "active job stop returns aborted",
+    "network failure clears prior result"
+  ],
+  "limitation": "DOM and actual local network integration; not a graphical browser session."
+}

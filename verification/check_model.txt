@@ -1,0 +1,23 @@
+{
+  "result": "PASS",
+  "parts": 608,
+  "cutawayVisible": 571,
+  "drawCalls": 85221,
+  "checks": [
+    "initial render command stream",
+    "finite camera and model matrices",
+    "door animation",
+    "cutaway",
+    "explode",
+    "group visibility",
+    "dimension toggle",
+    "reset",
+    "all camera presets",
+    "ray-triangle component selection",
+    "zoom",
+    "orbit"
+  ],
+  "limitation": "DOM and WebGL command harness; no installed browser binary for an end-to-end browser render."
+}
+Simulation frame colour and cutaway bindings: PASS
+Final-suite status and station-door bindings: PASS

@@ -1,0 +1,150 @@
+{
+  "currency": "USD",
+  "date": "2026-10-17",
+  "items": [
+    {
+      "name": "DC-link charging supply",
+      "specification": "B&K 9185B candidate: 0\u2013400 V/0.5 A or 0\u2013600 V/0.35 A",
+      "quantity": 1,
+      "unit_usd": 1797,
+      "basis": "Published USD price; source 1"
+    },
+    {
+      "name": "Oscilloscope",
+      "specification": "SIGLENT SDS3034X HD candidate, 350 MHz / four channels",
+      "quantity": 1,
+      "unit_usd": 4244,
+      "basis": "Published USD price; source 2"
+    },
+    {
+      "name": "Collector differential probe",
+      "specification": "SIGLENT DPB5150A candidate, 100 MHz / 1500 V differential",
+      "quantity": 1,
+      "unit_usd": 1392,
+      "basis": "Published USD price; source 3; common-mode installation must be reviewed"
+    },
+    {
+      "name": "Isolated gate measurement",
+      "specification": "Wideband optical/isolated probe with suitable high-side CMRR",
+      "quantity": 1,
+      "unit_usd": 8000,
+      "basis": "Engineering allowance; obtain quotation"
+    },
+    {
+      "name": "Pulse current measurement",
+      "specification": "Qualified low-inductance shunt / sensor and isolated acquisition",
+      "quantity": 1,
+      "unit_usd": 3000,
+      "basis": "Engineering allowance; review bandwidth and fault pulse rating"
+    },
+    {
+      "name": "Deskew / calibration fixture",
+      "specification": "Voltage-current timing alignment fixture",
+      "quantity": 1,
+      "unit_usd": 350,
+      "basis": "Engineering allowance"
+    },
+    {
+      "name": "Pulse generator / sequencer",
+      "specification": "Hardware timing, bounded pulse width, independent gate inhibit",
+      "quantity": 1,
+      "unit_usd": 1800,
+      "basis": "Engineering allowance"
+    },
+    {
+      "name": "100 Vrms / 25 kHz driver source",
+      "specification": "Custom isolated excitation, two driver channels with margin",
+      "quantity": 1,
+      "unit_usd": 3500,
+      "basis": "Engineering allowance; OEM details required"
+    },
+    {
+      "name": "Fiber interfaces / adapters",
+      "specification": "Command/status transmitters, receivers and keyed interface",
+      "quantity": 1,
+      "unit_usd": 1200,
+      "basis": "Engineering allowance; protocol and optics unknown"
+    },
+    {
+      "name": "HV static / insulation instrumentation",
+      "specification": "Guarded current-limited 1200 V source and leakage measurement",
+      "quantity": 1,
+      "unit_usd": 4500,
+      "basis": "Engineering allowance; separate from 600 V charger"
+    },
+    {
+      "name": "Static conduction pulse source",
+      "specification": "80 A brief-current capability and Kelvin measurement fixture",
+      "quantity": 1,
+      "unit_usd": 2000,
+      "basis": "Engineering allowance; may share an approved pulse stage"
+    },
+    {
+      "name": "Bench DMM / auxiliary metrology",
+      "specification": "Low-energy diode, rails and continuity measurements",
+      "quantity": 1,
+      "unit_usd": 650,
+      "basis": "Engineering allowance"
+    },
+    {
+      "name": "Pulse power components",
+      "specification": "DC capacitors, load inductor, busbar and limited-energy fault fixture",
+      "quantity": 1,
+      "unit_usd": 2500,
+      "basis": "Engineering allowance; pulse ratings need review"
+    },
+    {
+      "name": "Independent safety hardware",
+      "specification": "Contactors, fuses, interlocks, dump resistors, voltage monitor, E-stop",
+      "quantity": 1,
+      "unit_usd": 2500,
+      "basis": "Engineering allowance; no safety certification assumed"
+    },
+    {
+      "name": "Cabinet / fixture / handling",
+      "specification": "Guarded enclosure, slide, restraint and lifting aid provision",
+      "quantity": 1,
+      "unit_usd": 4000,
+      "basis": "Engineering allowance for prototype fabrication"
+    },
+    {
+      "name": "Cooling and sensors",
+      "specification": "Cold-plate interface, coolant hardware, flow and temperature sensing",
+      "quantity": 1,
+      "unit_usd": 1500,
+      "basis": "Engineering allowance"
+    },
+    {
+      "name": "Local controller / I/O",
+      "specification": "Isolated sequencing and feedback I/O, separate from safety logic",
+      "quantity": 1,
+      "unit_usd": 800,
+      "basis": "Engineering allowance"
+    },
+    {
+      "name": "Laptop",
+      "specification": "Local sequencing/report workstation",
+      "quantity": 1,
+      "unit_usd": 1000,
+      "basis": "Engineering allowance; subtract if already available"
+    },
+    {
+      "name": "Wiring / adapters / labels",
+      "specification": "Rated cables, connectors, guards, terminals and identification",
+      "quantity": 1,
+      "unit_usd": 1000,
+      "basis": "Engineering allowance"
+    },
+    {
+      "name": "Initial calibration / verification",
+      "specification": "Instrument checks and metrology services",
+      "quantity": 1,
+      "unit_usd": 1200,
+      "basis": "Engineering allowance; annual cost not included"
+    }
+  ],
+  "subtotal_usd": 46933,
+  "contingency_usd": 9387,
+  "engineering_usd": 16000,
+  "total_usd": 72320
+}
